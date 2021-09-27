@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.mobileapplication.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +23,8 @@
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
 <!--        </activity>-->
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".ProfileEditActivity" />
+        <activity android:name="com.example.mobileapplication.ProfileActivity" />
+        <activity android:name="com.example.mobileapplication.ProfileEditActivity" />
     </application>
 
 

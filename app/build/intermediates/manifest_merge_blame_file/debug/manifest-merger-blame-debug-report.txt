@@ -45,7 +45,7 @@
 27        <activity
 27-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:11:9-18:20
 28            android:name="com.example.mobileapplication.MainActivity"
-28-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:12:13-41
+28-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:12:13-70
 29            android:exported="true" >
 29-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:13:13-36
 30            <intent-filter>
@@ -67,11 +67,11 @@
 41        <!-- </intent-filter> -->
 42        <!-- </activity> -->
 43        <activity android:name="com.example.mobileapplication.ProfileActivity" />
-43-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:26:9-53
-43-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:26:19-50
+43-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:26:9-82
+43-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:26:19-79
 44        <activity android:name="com.example.mobileapplication.ProfileEditActivity" />
-44-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:27:9-57
-44-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:27:19-54
+44-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:27:9-86
+44-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:27:19-83
 45
 46        <receiver
 46-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20

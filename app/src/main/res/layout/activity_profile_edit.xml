@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.example.mobileapplication.ProfileEditActivity" >
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <ImageButton
+            android:id="@+id/back_to_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingLeft="15dp"
+            android:src="@drawable/ic_back"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="297dp"
+        android:layout_height="460dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/profile_image"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:src="@drawable/default_avatar"-->
+<!--            app:civ_border_color="@color/colorWhite"-->
+<!--            app:civ_border_width="2dp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="36dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textColor="@color/colorDeepCoffee" />
+
+                <EditText
+                    android:id="@+id/edit_usr_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="Donald Trump"
+                    android:inputType="text"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/colorDeepCoffee" />
+
+                <EditText
+                    android:id="@+id/edit_descroption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="@color/colorDeepCoffee" />
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingTop="13dp">-->
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Phone"-->
+            <!--                    android:textColor="@color/colorDeepCoffee" />-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edit_Phone"-->
+            <!--                    android:layout_width="285dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center_vertical"-->
+            <!--                    android:inputType="text"-->
+            <!--                    android:textSize="16dp"-->
+            <!--                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/colorDeepCoffee" />
+
+                <EditText
+                    android:id="@+id/edit_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:textSize="16dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zodiac"
+                    android:textColor="@color/colorDeepCoffee" />
+
+                <Spinner
+                    android:id="@+id/edit_zodiac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/update_profile_button"
+            android:background="@drawable/rounded_button"
+            android:layout_width="88dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:ellipsize="middle"
+            android:text="Update"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -2,5 +2,14 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryText">#212121</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorEggshell">#ECE8DC</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBackground">#FBFBFB</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorMilk">#FFFAFA</color>
+    <color name="colorDeepCoffee">#6C4740</color>
+    <color name="colorGray">#bebebe</color>
+    <color name="colorSteelBlue">#4682b4</color>
 </resources>

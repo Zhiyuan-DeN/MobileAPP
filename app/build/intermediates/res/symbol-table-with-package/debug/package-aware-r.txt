@@ -657,7 +657,7 @@ id alertTitle
 id all
 id always
 id async
-id back_button
+id back_to_main_btn
 id back_to_profile
 id beginning
 id blocking
@@ -682,7 +682,7 @@ id disableHome
 id edit_descroption
 id edit_email
 id edit_location
-id edit_profile
+id edit_profile_btn
 id edit_query
 id edit_usr_name
 id edit_zodiac
@@ -705,7 +705,7 @@ id ifRoom
 id image
 id info
 id italic
-id jump_to_profile
+id jump_to_profile_btn
 id left
 id line1
 id line3
@@ -725,6 +725,8 @@ id parentPanel
 id phone
 id post_num
 id profile_image
+id profile_reset_btn
+id profile_update_btn
 id progress_circular
 id progress_horizontal
 id radio
@@ -775,7 +777,6 @@ id topPanel
 id topbar
 id uniform
 id up
-id update_profile_button
 id useLogo
 id usr_description
 id usr_name

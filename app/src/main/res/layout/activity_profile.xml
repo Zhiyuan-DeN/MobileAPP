@@ -14,11 +14,11 @@
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="335dp" >
+        android:layout_height="325dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="285dp"
+            android:layout_height="280dp"
             android:background="@color/colorEggshell"
             android:orientation="vertical" >
 
@@ -70,7 +70,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:text="USER NAME"
+                android:hint="USER NAME"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -79,13 +79,13 @@
             <TextView
                 android:id="@+id/usr_description"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_below="@id/usr_name"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:inputType="text"
-                android:maxLength="20"
                 android:hint="Descriptions..."
+                android:inputType="text"
+                android:maxLength="35"
                 android:textColorHint="@color/colorGray"
                 android:textSize="18sp"
                 android:textStyle="italic"
@@ -99,7 +99,7 @@
             android:layout_height="75dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_marginTop="245dp"
+            android:layout_marginTop="240dp"
             app:cardCornerRadius="15dp" >
 
             <LinearLayout
@@ -215,7 +215,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="e.g. userName@gmail.com"
+                    android:hint="userName@gmail.com"
                     android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
@@ -251,7 +251,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="e.g. +61 0xxxxxxxxx"
+                    android:hint="+61 0xxxxxxxxx"
                     android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
@@ -287,7 +287,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="e.g. Melbourne"
+                    android:hint="Melbourne"
                     android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
@@ -307,7 +307,7 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/edit_profile"
+            android:id="@+id/edit_profile_btn"
             android:layout_width="59dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
@@ -325,7 +325,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/back_button"
+            android:id="@+id/back_to_main_btn"
             android:layout_width="59dp"
             android:layout_height="32dp"
             android:layout_gravity="center"

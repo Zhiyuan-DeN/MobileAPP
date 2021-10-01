@@ -19,17 +19,17 @@
 
         <ImageButton
             android:id="@+id/back_to_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="64dp"
+            android:layout_height="45dp"
             android:background="@color/colorWhite"
             android:paddingLeft="15dp"
             android:src="@drawable/ic_back"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginRight="15dp"
+            android:layout_width="301dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="25dp"
             android:gravity="center"
             android:text="Edit Profile"
             android:textAlignment="center"
@@ -211,13 +211,30 @@
         android:layout_marginTop="15dp">
 
         <Button
-            android:id="@+id/update_profile_button"
-            android:background="@drawable/rounded_button"
-            android:layout_width="88dp"
-            android:layout_height="36dp"
+            android:id="@+id/profile_update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
             android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
             android:ellipsize="middle"
             android:text="Update"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/profile_reset_btn"
+            android:background="@drawable/rounded_button"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:ellipsize="middle"
+            android:text="Reset"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />

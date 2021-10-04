@@ -39,10 +39,8 @@ public class LoginActivity extends AppCompatActivity{
                 Toast.makeText(LoginActivity.this,ok,Toast.LENGTH_SHORT).show();
 
                 // Turn to main page
-                /*
-                // Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                // startActivity(i);
-                 */
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
             }
         });
 

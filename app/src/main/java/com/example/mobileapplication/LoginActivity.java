@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity{
                 // Turn to main page
                 Intent i = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
+
             }
         });
 

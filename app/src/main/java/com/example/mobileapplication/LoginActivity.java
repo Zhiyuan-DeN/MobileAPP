@@ -1,7 +1,6 @@
 package com.example.mobileapplication;
 
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +9,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.mobileapplication.database.DatabaseModel;
+import com.example.mobileapplication.database.User;
 
 public class LoginActivity extends AppCompatActivity{
     Button button;
@@ -33,15 +35,25 @@ public class LoginActivity extends AppCompatActivity{
             public void onClick(View view) {
                 String username1 = username.getText().toString();
                 String password1 = password.getText().toString();
-                String ok = "Login Successful";
-                String fail = "Login Failed";
-                // Login Successful
-                Toast.makeText(LoginActivity.this,ok,Toast.LENGTH_SHORT).show();
+                DatabaseModel.getInstance().requestLogin(username1, password1, new DatabaseModel.RequestResponse() {
+                    @Override
+                    public void onSuccess(User user) {
+                        String ok = "Login Successful";
+                        // Login Successful
+                        Toast.makeText(LoginActivity.this,ok,Toast.LENGTH_SHORT).show();
 
-                // Turn to main page
-                Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
+                        // Turn to main page
+                        Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(i);
+                    }
 
+                    @Override
+                    public void onError(Exception e) {
+                        String fail = "Login Failed";
+                        // Login Successful
+                        Toast.makeText(LoginActivity.this,fail,Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 

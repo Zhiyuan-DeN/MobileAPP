@@ -1,20 +1,14 @@
 package com.example.mobileapplication.database;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.Map;
-import java.util.Objects;
+import java.util.HashMap;
 
 public class DatabaseModel {
     private final String TAG = "DatabaseModel";
@@ -33,33 +27,47 @@ public class DatabaseModel {
         return instance;
     }
 
-    public void requestLogin(String userName, String password, RequestResponse requestResponse) {
+    public void getUserProfile(String userName, String password, RequestResponse requestResponse) {
         db.collection("Users")
+                .document(userName)
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Map<String, Object> data = document.getData();
-                                if (Objects.equals(data.get("UserName"), userName) && Objects.equals(data.get(
-                                        "Password"), password)) {
-                                    requestResponse.onSuccess(new User(
-                                            data.get("Description").toString(),
-                                            data.get("Email").toString(),
-                                            data.get("Password").toString(),
-                                            data.get("PhoneNum").toString(),
-                                            data.get("UserID").toString(),
-                                            data.get("UserName").toString(),
-                                            data.get("location").toString()
-                                    ));
-                                    return;
-                                }
-                            }
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        User user = documentSnapshot.toObject(User.class);
+                        if (user == null) {
+                            requestResponse.onError(new RuntimeException());
+                        } else if (user.getUserName().equals(userName) && user.getPassWord().equals(password)) {
+                            requestResponse.onSuccess(user);
+                        } else {
+                            requestResponse.onError(new RuntimeException());
                         }
-                        requestResponse.onError(new RuntimeException("login error"));
                     }
                 })
+                /* .addOnSuccessListener(new OnCompleteListener<DocumentSnapshot>() {
+                     @Override
+                     public void onComplete(@NonNull DocumentSnapshot task) {
+                         if (task.isSuccessful()) {
+                             for (QueryDocumentSnapshot document : task.getResult()) {
+                                 Map<String, Object> data = document.getData();
+                                 if (Objects.equals(data.get("UserName"), userName) && Objects.equals(data.get(
+                                         "Password"), password)) {
+                                     requestResponse.onSuccess(new User(
+                                             data.get("Description").toString(),
+                                             data.get("Email").toString(),
+                                             data.get("Password").toString(),
+                                             data.get("PhoneNum").toString(),
+                                             data.get("UserID").toString(),
+                                             data.get("UserName").toString(),
+                                             data.get("location").toString()
+                                     ));
+                                     return;
+                                 }
+                             }
+                         }
+                         requestResponse.onError(new RuntimeException("cant match any one."));
+                     }
+                 })*/
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -70,11 +78,12 @@ public class DatabaseModel {
 
     public void requestRegister(User user, RequestResponse requestResponse) {
         db.collection("Users")
-                .add(user.toMap())
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                .document(user.getUserName())
+                .set(user)
+                //.add(user.toMap())
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                    public void onSuccess(Void unused) {
                         requestResponse.onSuccess(user);
                     }
                 })
@@ -84,6 +93,29 @@ public class DatabaseModel {
                         requestResponse.onError(e);
                     }
                 });
+    }
+
+    public void updateUserProfile(String oldUserName, String userName, String description,
+                                  String email,
+                                  String location, RequestResponse requestResponse) {
+        DocumentReference user = db.collection("Users")
+                .document(oldUserName);
+        HashMap<String, Object> map = new HashMap();
+        map.put("userName", userName);
+        map.put("description", description);
+        map.put("email", email);
+        map.put("location", location);
+        user.update(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                requestResponse.onSuccess(null);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                requestResponse.onError(e);
+            }
+        });
     }
 
     public interface RequestResponse {

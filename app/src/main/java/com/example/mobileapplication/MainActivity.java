@@ -16,12 +16,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //jump to profile page
         Button profileEditButton = findViewById(R.id.jump_to_profile);
+        Intent intent = getIntent();
+        final String userName = intent.getStringExtra("userName");
         profileEditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
+                if (userName != null) {
+                    i.putExtra("userName", userName);
+                }
                 startActivity(i);
-
             }
         });
     }

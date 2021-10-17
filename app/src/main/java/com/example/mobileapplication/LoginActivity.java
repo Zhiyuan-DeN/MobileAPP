@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity{
             public void onClick(View view) {
                 String username1 = username.getText().toString();
                 String password1 = password.getText().toString();
-                DatabaseModel.getInstance().getUserProfile(username1, password1, new DatabaseModel.RequestResponse() {
+                DatabaseModel.getInstance().requestLogin(username1, password1, new DatabaseModel.RequestResponse() {
                     @Override
                     public void onSuccess(User user) {
                         String ok = "Login Successful";
@@ -44,7 +44,6 @@ public class LoginActivity extends AppCompatActivity{
 
                         // Turn to main page
                         Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                        i.putExtra("userName", user.getDocument());
                         startActivity(i);
                     }
 

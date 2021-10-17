@@ -8,13 +8,9 @@ public class User {
     private String mEmail;
     private String mPassWord;
     private String mPhoneNum;
-    private String mDocument;
+    private String mUserId;
     private String mUserName;
     private String mLocation;
-
-    public User() {
-
-    }
 
     public User(String description, String email, String passWord, String phoneNum,
                 String userId, String userName, String location) {
@@ -22,7 +18,7 @@ public class User {
         this.mEmail = email;
         this.mPassWord = passWord;
         this.mPhoneNum = phoneNum;
-        this.mDocument = userId;
+        this.mUserId = userId;
         this.mUserName = userName;
         this.mLocation = location;
     }
@@ -43,8 +39,8 @@ public class User {
         return mPhoneNum;
     }
 
-    public String getDocument() {
-        return mDocument;
+    public String getUserId() {
+        return mUserId;
     }
 
     public String getUserName() {
@@ -71,8 +67,8 @@ public class User {
         this.mPhoneNum = mPhoneNum;
     }
 
-    public void setDocument(String mUserId) {
-        this.mDocument = mUserId;
+    public void setUserId(String mUserId) {
+        this.mUserId = mUserId;
     }
 
     public void setUserName(String mUserName) {
@@ -89,7 +85,7 @@ public class User {
         user.put("Email", this.mEmail);
         user.put("Password", this.mPassWord);
         user.put("PhoneNum", this.mPhoneNum);
-        user.put("UserID", this.mDocument);
+        user.put("UserID", this.mUserId);
         user.put("UserName", this.mUserName);
         user.put("location", this.mLocation);
         return user;

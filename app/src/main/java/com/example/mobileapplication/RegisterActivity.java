@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                             email_string,
                             password_string,
                             "123",
-                            userName_String,
+                            "1234",
                             userName_String,
                             "123"
                     ), new DatabaseModel.RequestResponse() {

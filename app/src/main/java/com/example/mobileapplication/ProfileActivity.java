@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
     Button profile_edit, back_to_main;
-    TextView usr_name, usr_description, email, location;
+    TextView usr_name, usr_description, email, location, phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         usr_description = (TextView) findViewById(R.id.usr_description);
         email = (TextView) findViewById(R.id.email);
         location = (TextView) findViewById(R.id.location);
+        phone = (TextView) findViewById(R.id.phone);
 
         Intent i_name = getIntent();
         String get_usr_name = i_name.getStringExtra("edit_name");
@@ -37,6 +38,10 @@ public class ProfileActivity extends AppCompatActivity {
         Intent i_loc = getIntent();
         String get_loc = i_loc.getStringExtra("edit_location");
         location.setText(get_loc);
+
+        Intent i_phone = getIntent();
+        String get_phone = i_phone.getStringExtra("edit_phone");
+        phone.setText(get_phone);
 
         //jump to edit page
         profile_edit = findViewById(R.id.edit_profile_btn);

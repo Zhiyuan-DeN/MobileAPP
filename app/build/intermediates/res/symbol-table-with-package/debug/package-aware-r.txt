@@ -612,6 +612,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_location
 drawable ic_phone
+drawable ic_zodiac
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -682,10 +683,10 @@ id disableHome
 id edit_descroption
 id edit_email
 id edit_location
+id edit_phone
 id edit_profile_btn
 id edit_query
 id edit_usr_name
-id edit_zodiac
 id email
 id end
 id expand_activities_button

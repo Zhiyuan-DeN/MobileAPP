@@ -215,8 +215,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="userName@gmail.com"
-                    android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
                     android:textStyle="bold"
@@ -224,41 +222,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:paddingLeft="45dp"
-            android:paddingTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:civ_border_color="@color/colorMilk"
-                app:civ_border_width="2dp"
-                android:src="@drawable/ic_phone"
-                android:background="@drawable/circle_shadows" />
-            <LinearLayout
-                android:orientation="vertical"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PHONE" />
-
-                <TextView
-                    android:id="@+id/phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="+61 0xxxxxxxxx"
-                    android:textColorHint="@color/colorGray"
-                    android:inputType="text"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </LinearLayout>
-        </LinearLayout>
 
         <LinearLayout
             android:paddingLeft="45dp"
@@ -287,12 +250,66 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="Melbourne"
-                    android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
                     android:textStyle="bold"
                     tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="45dp"
+            android:paddingTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+<!--            <ImageView-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                app:civ_border_color="@color/colorMilk"-->
+<!--                app:civ_border_width="2dp"-->
+<!--                android:src="@drawable/ic_phone"-->
+<!--                android:background="@drawable/circle_shadows" />-->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:civ_border_color="@color/colorMilk"
+                app:civ_border_width="2dp"
+                android:src="@drawable/ic_phone"
+                android:background="@drawable/circle_shadows" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHONE" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="ZODIAC" />-->
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+<!--                <TextView-->
+<!--                    android:id="@+id/zodiac"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:hint=""-->
+<!--                    android:textColorHint="@color/colorGray"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textSize="16dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:ignore="TouchTargetSizeCheck" />-->
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

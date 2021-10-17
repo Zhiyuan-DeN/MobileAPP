@@ -76,10 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="Donald Trump"
                     android:inputType="text"
                     android:textColor="@color/colorSecondaryText"
-                    android:textColorHint="@color/colorGray"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -104,6 +102,7 @@
                     android:layout_gravity="center_vertical"
                     android:inputType="text"
                     android:textColor="@color/colorSecondaryText"
+                    android:hint="e.g. Scott Morrison"
                     android:textColorHint="@color/colorGray"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -127,32 +126,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:hint="e.g. userName@gmail.com"
+                    android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </LinearLayout>
-
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:orientation="vertical"-->
-            <!--                android:paddingTop="13dp">-->
-            <!--                <TextView-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Phone"-->
-            <!--                    android:textColor="@color/colorDeepCoffee" />-->
-
-            <!--                <EditText-->
-            <!--                    android:id="@+id/edit_Phone"-->
-            <!--                    android:layout_width="285dp"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_gravity="center_vertical"-->
-            <!--                    android:inputType="text"-->
-            <!--                    android:textSize="16dp"-->
-            <!--                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
-            <!--            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,7 +154,6 @@
                     android:inputType="text"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -186,18 +165,42 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zodiac"
+                    android:text="Phone"
                     android:textColor="@color/colorDeepCoffee" />
 
-                <Spinner
-                    android:id="@+id/edit_zodiac"
-                    android:layout_width="152dp"
+                <EditText
+                    android:id="@+id/edit_phone"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="5dp"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    android:layout_gravity="center_vertical"
+                    android:hint="e.g. +61 0xxxxxxxxx"
+                    android:textColorHint="@color/colorGray"
+                    android:inputType="phone"
+                    android:textSize="16dp"
 
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingTop="13dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Zodiac"-->
+<!--                    android:textColor="@color/colorDeepCoffee" />-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/edit_zodiac"-->
+<!--                    android:layout_width="178dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
+<!--            </LinearLayout>-->
         </LinearLayout>
 
     </LinearLayout>

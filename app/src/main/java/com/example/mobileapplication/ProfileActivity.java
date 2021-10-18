@@ -13,6 +13,21 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        String username = "";//这里写上你从前端得到的name
+        User user = DatabaseModel.getInstance().getUserInfo(username,new DatabaseModel.RequestResponse() {
+            @Override
+            public void onSuccess(User user) {
+                Toast.makeText(getApplicationContext(), "Register Successful", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Toast.makeText(getApplicationContext(), "Register Failed",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
         //jump to edit page
         Button profileEditButton = findViewById(R.id.edit_profile);
         Intent intent = getIntent();

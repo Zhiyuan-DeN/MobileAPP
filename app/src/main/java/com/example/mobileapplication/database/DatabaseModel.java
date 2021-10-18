@@ -118,6 +118,39 @@ public class DatabaseModel {
         });
     }
 
+    public User getUserInfo(String userName, RequestResponse requestResponse) {
+        User user = new User();
+        db.collection("Users")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Map<String, Object> data = document.getData();
+                                if (Objects.equals(data.get("UserName"), userName)) {
+                                    user.setDescription(data.get("Description").toString());
+                                    user.setEmail(data.get("Email").toString());
+                                    user.setPassWord(data.get("Password").toString());
+                                    user.setPhoneNum(data.get("PhoneNum").toString());
+                                    user.setUserId(data.get("UserID").toString());
+                                    user.setUserName(data.get("UserName").toString());
+                                    user.setLocation(data.get("location").toString());
+                                }
+                            }
+                        }
+                        requestResponse.onError(new RuntimeException("login error"));
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        requestResponse.onError(e);
+                    }
+                });
+        return user;
+    }
+
     public interface RequestResponse {
         void onSuccess(User user);
 

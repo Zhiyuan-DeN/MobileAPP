@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        
+
         usr_name = (TextView) findViewById(R.id.usr_name);
         Intent i = getIntent();
         Bundle b = i.getExtras();
@@ -27,7 +27,7 @@ public class ProfileActivity extends AppCompatActivity {
             j =(String) b.get("userName");
             usr_name.setText(j);
         }
-        
+
         String username = j;//这里写上你从前端得到的name
         User user = DatabaseModel.getInstance().getUserInfo(username,new DatabaseModel.RequestResponse() {
             @Override

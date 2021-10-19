@@ -15,7 +15,8 @@ import com.example.mobileapplication.database.DatabaseModel;
 import com.example.mobileapplication.database.User;
 
 public class ProfileEditActivity extends AppCompatActivity {
-
+    Button update, reset;
+    EditText usr_name, usr_description, email, location, phone;
     Spinner select;
 
     @Override
@@ -31,19 +32,19 @@ public class ProfileEditActivity extends AppCompatActivity {
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 //        select.setAdapter(adapter);
 
-        ImageButton back_to_profile = (ImageButton)findViewById(R.id.back_to_profile);
-        Button update_profile_button = findViewById(R.id.profile_update_btn);
 
-        EditText userName = findViewById(R.id.edit_usr_name);
-        EditText edit_descroption = findViewById(R.id.edit_descroption);
-        EditText email = findViewById(R.id.edit_email);
-        EditText location = findViewById(R.id.edit_location);
+        usr_name = (EditText) findViewById(R.id.edit_usr_name);
+        usr_description = (EditText) findViewById(R.id.edit_descroption);
+        email = (EditText) findViewById(R.id.edit_email);
+        location = (EditText) findViewById(R.id.edit_location);
+        phone = (EditText) findViewById(R.id.edit_phone);
+        update = findViewById(R.id.profile_update_btn);
 
-        update_profile_button.setOnClickListener(new View.OnClickListener() {
+        update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseModel.getInstance().updateUserProfile(oldUserName, userName.getText().toString(),
-                        edit_descroption.getText().toString(), email.getText().toString(),
+                DatabaseModel.getInstance().updateUserProfile(oldUserName, usr_name.getText().toString(),
+                        update.getText().toString(), email.getText().toString(),
                         location.getText().toString(), new DatabaseModel.RequestResponse() {
                             @Override
                             public void onSuccess(User user) {
@@ -58,6 +59,23 @@ public class ProfileEditActivity extends AppCompatActivity {
             }
         });
 
+
+        //clear all
+        reset = findViewById(R.id.profile_reset_btn);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // clearing out all the values
+                usr_name.setText("");
+                usr_description.setText("");
+                email.setText("");
+                location.setText("");
+                phone.setText("");
+            }
+        });
+
+        //back to profile
+        ImageButton back_to_profile = (ImageButton)findViewById(R.id.back_to_profile);
         back_to_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

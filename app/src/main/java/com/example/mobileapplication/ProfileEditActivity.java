@@ -23,8 +23,28 @@ public class ProfileEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_edit);
 
-        Intent intent = getIntent();
-        String oldUserName = intent.getStringExtra("userName");
+        //Intent intent = getIntent();
+        //String oldUserName = intent.getStringExtra("userName");
+        
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+
+        String user_prof =(String) b.get("userName");
+        if(user_prof != null) {
+            usr_name.setText(user_prof);
+        }
+        String edit_prof = (String) b.get("description");
+        if(edit_prof != null) {
+            usr_description.setText(edit_prof);
+        }
+        String email_prof = (String) b.get("email");
+        if(edit_prof != null) {
+            email.setText(email_prof);
+        }
+        String location_prof = (String) b.get("location");
+        if(location_prof != null) {
+            location.setText(location_prof);
+        }
 
 //        select = findViewById(R.id.edit_zodiac);
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.zodiac_array));

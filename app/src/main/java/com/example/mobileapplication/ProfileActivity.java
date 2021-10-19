@@ -21,11 +21,16 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         usr_name = (TextView) findViewById(R.id.usr_name);
-        Intent i = getIntent();
-        Bundle b = i.getExtras();
-        if(b!=null) {
-            j =(String) b.get("userName");
-            usr_name.setText(j);
+        Intent i_name = getIntent();
+        Bundle get_usr_name = i_name.getExtras();
+        String user =(String) get_usr_name.get("userName");
+        String edit = (String) get_usr_name.get("edit_name");
+        if(user != null) {
+            usr_name.setText(user);
+            j = usr_name;
+        } else {
+            usr_name.setText(edit);
+            j = usr_name;
         }
 
         String username = j;//这里写上你从前端得到的name
@@ -54,6 +59,9 @@ public class ProfileActivity extends AppCompatActivity {
                 if (userName != null) {
                     i.putExtra("userName", userName);
                 }
+                i.putExtra("description", usr_description.getText().toString());
+                i.putExtra("email", email.getText().toString());
+                i.putExtra("location", location.getText().toString());
                 startActivity(i);
 
             }

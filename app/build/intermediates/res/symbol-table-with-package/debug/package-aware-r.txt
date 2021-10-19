@@ -729,7 +729,6 @@ id edit_phone
 id edit_profile_btn
 id edit_query
 id edit_text
-id edit_usr_name
 id email
 id end
 id expand_activities_button
@@ -828,6 +827,7 @@ id top
 id topPanel
 id top_bar
 id topbar
+id unchangeable_usr_name
 id uniform
 id up
 id useLogo

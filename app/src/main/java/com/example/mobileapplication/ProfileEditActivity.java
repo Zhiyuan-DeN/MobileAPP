@@ -19,7 +19,7 @@ public class ProfileEditActivity extends AppCompatActivity {
     Spinner select_zodiac;
     EditText usr_description, email, location, phone;
     Button update, reset;
-    String edit_name, edit_description, edit_email, edit_location, edit_phone;
+    String unable_edt_name, edit_description, edit_email, edit_location, edit_phone;
     TextView unchangeable_usr_name;
     String j;
 
@@ -43,14 +43,14 @@ public class ProfileEditActivity extends AppCompatActivity {
 
         unchangeable_usr_name.setText(oldUserName);
 
-        //update profile
+        /* update profile */
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 update_profile();
                 if (valid_input() == true) {
                     Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-//                    intent.putExtra("edit_name", edit_name);
+                    intent.putExtra("unable_edt_name", unable_edt_name);
                     intent.putExtra("edit_description", edit_description);
                     intent.putExtra("edit_email", edit_email);
                     intent.putExtra("edit_location", edit_location);
@@ -60,7 +60,7 @@ public class ProfileEditActivity extends AppCompatActivity {
             }
         });
 
-        //clear all
+        /* clear all */
         reset = findViewById(R.id.profile_reset_btn);
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +73,7 @@ public class ProfileEditActivity extends AppCompatActivity {
             }
         });
 
-        //back to profile
+        /* back to profile */
         ImageButton back_to_profile = (ImageButton)findViewById(R.id.back_to_profile);
         back_to_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +85,7 @@ public class ProfileEditActivity extends AppCompatActivity {
     }
 
     private void update_profile() {
-//        edit_name = usr_name.getText().toString();
+        unable_edt_name = unchangeable_usr_name.getText().toString();
         edit_description = usr_description.getText().toString();
         edit_email = email.getText().toString();
         edit_location = location.getText().toString();

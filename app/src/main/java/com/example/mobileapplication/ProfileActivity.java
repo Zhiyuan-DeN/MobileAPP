@@ -44,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
         //jump to edit page
-        Button profileEditButton = findViewById(R.id.edit_profile);
+        Button profileEditButton = findViewById(R.id.edit_profile_btn);
         Intent intent = getIntent();
         final String userName = intent.getStringExtra("userName");
         profileEditButton.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         //back to main page
-        Button backToMain = findViewById(R.id.back_button);
+        Button backToMain = findViewById(R.id.back_to_main_btn);
         backToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

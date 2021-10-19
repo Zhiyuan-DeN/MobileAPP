@@ -697,8 +697,8 @@ int id all 0x7f08001d
 int id always 0x7f08001e
 int id async 0x7f08001f
 int id auto 0x7f080020
-int id back_button 0x7f080021
-int id back_to_login 0x7f080022
+int id back_to_login 0x7f080021
+int id back_to_main_btn 0x7f080022
 int id back_to_profile 0x7f080023
 int id beginning 0x7f080024
 int id blocking 0x7f080025
@@ -725,7 +725,7 @@ int id edit_descroption 0x7f080039
 int id edit_email 0x7f08003a
 int id edit_location 0x7f08003b
 int id edit_phone 0x7f08003c
-int id edit_profile 0x7f08003d
+int id edit_profile_btn 0x7f08003d
 int id edit_query 0x7f08003e
 int id edit_text 0x7f08003f
 int id edit_usr_name 0x7f080040

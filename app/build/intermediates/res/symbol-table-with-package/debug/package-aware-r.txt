@@ -698,8 +698,8 @@ id all
 id always
 id async
 id auto
-id back_button
 id back_to_login
+id back_to_main_btn
 id back_to_profile
 id beginning
 id blocking
@@ -726,7 +726,7 @@ id edit_descroption
 id edit_email
 id edit_location
 id edit_phone
-id edit_profile
+id edit_profile_btn
 id edit_query
 id edit_text
 id edit_usr_name

@@ -3130,8 +3130,8 @@ public final class R {
     public static final int always=0x7f08001e;
     public static final int async=0x7f08001f;
     public static final int auto=0x7f080020;
-    public static final int back_button=0x7f080021;
-    public static final int back_to_login=0x7f080022;
+    public static final int back_to_login=0x7f080021;
+    public static final int back_to_main_btn=0x7f080022;
     public static final int back_to_profile=0x7f080023;
     public static final int beginning=0x7f080024;
     public static final int blocking=0x7f080025;
@@ -3158,7 +3158,7 @@ public final class R {
     public static final int edit_email=0x7f08003a;
     public static final int edit_location=0x7f08003b;
     public static final int edit_phone=0x7f08003c;
-    public static final int edit_profile=0x7f08003d;
+    public static final int edit_profile_btn=0x7f08003d;
     public static final int edit_query=0x7f08003e;
     public static final int edit_text=0x7f08003f;
     public static final int edit_usr_name=0x7f080040;

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
     defaultConfig {
         applicationId "com.example.mobileapplication"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -31,6 +31,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-firestore'
     implementation 'com.google.firebase:firebase-analytics'
     implementation files('../gradle/wrapper/gradle-wrapper.jar')
     testImplementation 'junit:junit:4.12'

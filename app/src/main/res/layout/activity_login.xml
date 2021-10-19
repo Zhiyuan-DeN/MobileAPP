@@ -1,0 +1,100 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="50dp"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello!"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:layout_marginBottom="30dp"
+        android:textColor="#6C4740"
+        android:textStyle="bold"
+    />
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in to your account"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#ECE8DC"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor = "#6C4740"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter your username"
+        android:textSize="16sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="16sp"
+        android:textColor = "#6C4740"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter your password"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="No Account? Click Here"
+        android:textSize="14sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp">
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:text="Login"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="#ECE8DC"/>
+
+    </LinearLayout>
+
+</LinearLayout>

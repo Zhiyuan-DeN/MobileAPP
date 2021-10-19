@@ -102,7 +102,6 @@
                     android:layout_gravity="center_vertical"
                     android:inputType="text"
                     android:textColor="@color/colorSecondaryText"
-                    android:hint="e.g. Scott Morrison"
                     android:textColorHint="@color/colorGray"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />

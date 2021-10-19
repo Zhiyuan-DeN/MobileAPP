@@ -19,17 +19,17 @@
 
         <ImageButton
             android:id="@+id/back_to_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="64dp"
+            android:layout_height="45dp"
             android:background="@color/colorWhite"
             android:paddingLeft="15dp"
             android:src="@drawable/ic_back"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginRight="15dp"
+            android:layout_width="301dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="25dp"
             android:gravity="center"
             android:text="Edit Profile"
             android:textAlignment="center"
@@ -45,14 +45,14 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-<!--        <de.hdodenhof.circleimageview.CircleImageView-->
-<!--            android:id="@+id/profile_image"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="110dp"-->
-<!--            android:layout_marginTop="30dp"-->
-<!--            android:src="@drawable/default_avatar"-->
-<!--            app:civ_border_color="@color/colorWhite"-->
-<!--            app:civ_border_width="2dp" />-->
+        <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+        <!--            android:id="@+id/profile_image"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="110dp"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:src="@drawable/default_avatar"-->
+        <!--            app:civ_border_color="@color/colorWhite"-->
+        <!--            app:civ_border_width="2dp" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,10 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="Donald Trump"
                     android:inputType="text"
                     android:textColor="@color/colorSecondaryText"
-                    android:textColorHint="@color/colorGray"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -127,32 +125,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:hint="e.g. userName@gmail.com"
+                    android:textColorHint="@color/colorGray"
                     android:inputType="text"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </LinearLayout>
-
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:orientation="vertical"-->
-            <!--                android:paddingTop="13dp">-->
-            <!--                <TextView-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Phone"-->
-            <!--                    android:textColor="@color/colorDeepCoffee" />-->
-
-            <!--                <EditText-->
-            <!--                    android:id="@+id/edit_Phone"-->
-            <!--                    android:layout_width="285dp"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_gravity="center_vertical"-->
-            <!--                    android:inputType="text"-->
-            <!--                    android:textSize="16dp"-->
-            <!--                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
-            <!--            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,7 +153,6 @@
                     android:inputType="text"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -186,18 +164,42 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zodiac"
+                    android:text="Phone"
                     android:textColor="@color/colorDeepCoffee" />
 
-                <Spinner
-                    android:id="@+id/edit_zodiac"
+                <EditText
+                    android:id="@+id/edit_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="5dp"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    android:layout_gravity="center_vertical"
+                    android:hint="e.g. +61 0xxxxxxxxx"
+                    android:textColorHint="@color/colorGray"
+                    android:inputType="phone"
+                    android:textSize="16dp"
 
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingTop="13dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Zodiac"-->
+            <!--                    android:textColor="@color/colorDeepCoffee" />-->
+
+            <!--                <Spinner-->
+            <!--                    android:id="@+id/edit_zodiac"-->
+            <!--                    android:layout_width="178dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginBottom="20dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
+            <!--            </LinearLayout>-->
         </LinearLayout>
 
     </LinearLayout>
@@ -211,13 +213,30 @@
         android:layout_marginTop="15dp">
 
         <Button
-            android:id="@+id/update_profile_button"
-            android:background="@drawable/rounded_button"
-            android:layout_width="88dp"
-            android:layout_height="36dp"
+            android:id="@+id/profile_update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
             android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
             android:ellipsize="middle"
             android:text="Update"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/profile_reset_btn"
+            android:background="@drawable/rounded_button"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:ellipsize="middle"
+            android:text="Reset"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />

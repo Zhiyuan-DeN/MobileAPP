@@ -26,13 +26,13 @@ public class ProfileEditActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String oldUserName = intent.getStringExtra("userName");
 
-        select = findViewById(R.id.edit_zodiac);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.zodiac_array));
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        select.setAdapter(adapter);
+//        select = findViewById(R.id.edit_zodiac);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.zodiac_array));
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        select.setAdapter(adapter);
 
         ImageButton back_to_profile = (ImageButton)findViewById(R.id.back_to_profile);
-        Button update_profile_button = findViewById(R.id.update_profile_button);
+        Button update_profile_button = findViewById(R.id.profile_update_btn);
 
         EditText userName = findViewById(R.id.edit_usr_name);
         EditText edit_descroption = findViewById(R.id.edit_descroption);

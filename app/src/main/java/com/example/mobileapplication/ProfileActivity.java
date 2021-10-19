@@ -4,10 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.mobileapplication.database.DatabaseModel;
+import com.example.mobileapplication.database.User;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
+    TextView usr_name;
+    String j;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +24,7 @@ public class ProfileActivity extends AppCompatActivity {
         Intent i = getIntent();
         Bundle b = i.getExtras();
         if(b!=null) {
-            String j =(String) b.get("userName");
+            j =(String) b.get("userName");
             usr_name.setText(j);
         }
         

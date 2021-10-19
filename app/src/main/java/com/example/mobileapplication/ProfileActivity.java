@@ -59,6 +59,9 @@ public class ProfileActivity extends AppCompatActivity {
                 if (userName != null) {
                     i.putExtra("userName", userName);
                 }
+                i.putExtra("description", usr_description.getText().toString());
+                i.putExtra("email", email.getText().toString());
+                i.putExtra("location", location.getText().toString());
                 startActivity(i);
 
             }

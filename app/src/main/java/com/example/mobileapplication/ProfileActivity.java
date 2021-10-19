@@ -13,7 +13,8 @@ import com.example.mobileapplication.database.User;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
-    TextView usr_name;
+    Button profile_edit, back_to_main;
+    TextView usr_name, usr_description, email, location, phone;
     String j;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +22,38 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         usr_name = (TextView) findViewById(R.id.usr_name);
-        Intent i_name = getIntent();
-        Bundle get_usr_name = i_name.getExtras();
-        String user =(String) get_usr_name.get("userName");
-        String edit = (String) get_usr_name.get("edit_name");
-        if(user != null) {
-            usr_name.setText(user);
-            j = usr_name;
-        } else {
-            usr_name.setText(edit);
-            j = usr_name;
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+        if(b!=null) {
+            j =(String) b.get("userName");
+            usr_name.setText(j);
         }
+
+
+        usr_description = (TextView) findViewById(R.id.usr_description);
+        email = (TextView) findViewById(R.id.email);
+        location = (TextView) findViewById(R.id.location);
+        phone = (TextView) findViewById(R.id.phone);
+
+//        Intent i_name = getIntent();
+//        String get_usr_name = i_name.getStringExtra("edit_name");
+//        usr_name.setText(get_usr_name);
+
+        Intent i_desc = getIntent();
+        String get_desc = i_desc.getStringExtra("edit_description");
+        usr_description.setText(get_desc);
+
+        Intent i_email = getIntent();
+        String get_email = i_email.getStringExtra("edit_email");
+        email.setText(get_email);
+
+        Intent i_loc = getIntent();
+        String get_loc = i_loc.getStringExtra("edit_location");
+        location.setText(get_loc);
+
+        Intent i_phone = getIntent();
+        String get_phone = i_phone.getStringExtra("edit_phone");
+        phone.setText(get_phone);
 
         String username = j;//这里写上你从前端得到的name
         User user = DatabaseModel.getInstance().getUserInfo(username,new DatabaseModel.RequestResponse() {
@@ -48,6 +70,8 @@ public class ProfileActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+
+
         //jump to edit page
         Button profileEditButton = findViewById(R.id.edit_profile_btn);
         Intent intent = getIntent();
@@ -59,9 +83,6 @@ public class ProfileActivity extends AppCompatActivity {
                 if (userName != null) {
                     i.putExtra("userName", userName);
                 }
-                i.putExtra("description", usr_description.getText().toString());
-                i.putExtra("email", email.getText().toString());
-                i.putExtra("location", location.getText().toString());
                 startActivity(i);
 
             }

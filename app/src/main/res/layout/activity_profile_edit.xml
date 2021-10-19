@@ -71,14 +71,15 @@
                     android:text="User Name"
                     android:textColor="@color/colorDeepCoffee" />
 
-                <EditText
-                    android:id="@+id/edit_usr_name"
+                <TextView
+                    android:id="@+id/unchangeable_usr_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:inputType="text"
                     android:textColor="@color/colorSecondaryText"
                     android:textSize="16dp"
+                    android:focusable="false"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </LinearLayout>

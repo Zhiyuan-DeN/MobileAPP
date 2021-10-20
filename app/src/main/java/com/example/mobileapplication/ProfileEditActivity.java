@@ -79,7 +79,7 @@ public class ProfileEditActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
-                startActivity(i);
+                ProfileEditActivity.this.finish();
             }
         });
     }

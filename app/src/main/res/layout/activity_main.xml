@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,23 +8,57 @@
     android:background="@color/colorWhite"
     tools:context="com.example.mobileapplication.MainActivity" >
 
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:menu="@menu/main_menu" />-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="285dp"
+        android:layout_height="185dp"
         android:background="@color/colorWhite"
         android:orientation="vertical" >
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/jump_to_profile"
-        android:layout_width="165dp"
-        android:layout_height="32dp"
-        android:layout_gravity="center"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="100dp">
 
-        android:background="@color/colorEggshell"
-        android:ellipsize="middle"
-        android:text="GO TO PROFILE"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+        <Button
+            android:id="@+id/new_recording"
+            android:layout_width="165dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:background="@color/colorEggshell"
+            android:ellipsize="middle"
+            android:text="NEW RECORDING"
+            android:textColor="@color/colorSecondaryText"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/jump_to_profile"
+            android:layout_width="165dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:background="@color/colorEggshell"
+            android:ellipsize="middle"
+            android:text="GO TO PROFILE"
+            android:textColor="@color/colorSecondaryText"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </LinearLayout>
+
+
+
 </LinearLayout>

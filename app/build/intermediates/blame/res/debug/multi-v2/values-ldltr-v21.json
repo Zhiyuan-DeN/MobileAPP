@@ -4,7 +4,7 @@
             "outputFile": "/Users/xiaohanwei/Downloads/MobileAPP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/26056899fe7a685b36e8edd69b517537/appcompat-1.0.2/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/5fbf1990b85248f94397d59e461f338d/appcompat-1.2.0/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

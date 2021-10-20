@@ -9,16 +9,28 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+    Button profile_edt, new_recording;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //jump to profile page
-        Button profileEditButton = findViewById(R.id.jump_to_profile);
+
+        /* create a new voice recording */
+        new_recording = findViewById(R.id.new_recording);
+        new_recording.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),RecordActivity.class);
+                startActivity(i);
+            }
+        });
+
+        /* jump to profile page */
+        profile_edt = findViewById(R.id.jump_to_profile);
         Intent intent = getIntent();
         final String userName = intent.getStringExtra("userName");
-        profileEditButton.setOnClickListener(new View.OnClickListener() {
+        profile_edt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),ProfileActivity.class);

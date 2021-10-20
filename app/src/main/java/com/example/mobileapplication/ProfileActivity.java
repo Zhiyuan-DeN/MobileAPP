@@ -96,9 +96,14 @@ public class ProfileActivity extends AppCompatActivity {
         back_to_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+//                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                ProfileActivity.this.finish();
             }
+
         });
+
+
+
     }
 }

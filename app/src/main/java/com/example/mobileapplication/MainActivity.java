@@ -22,6 +22,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button new_record = findViewById(R.id.new_recording);
+        new_record.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),RecordActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+
+
+
         //jump to profile page
         Button profileEditButton = findViewById(R.id.jump_to_profile);
         Intent intent = getIntent();

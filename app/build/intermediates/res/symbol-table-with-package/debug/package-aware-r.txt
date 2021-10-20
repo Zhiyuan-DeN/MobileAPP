@@ -357,9 +357,11 @@ color colorDeepCoffee
 color colorEggshell
 color colorGray
 color colorMilk
+color colorMillennialPink
 color colorPrimary
 color colorPrimaryDark
 color colorPrimaryText
+color colorRoseGold
 color colorSecondaryText
 color colorSteelBlue
 color colorWhite
@@ -645,11 +647,14 @@ drawable default_avatar
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_back
+drawable ic_bg_smoke
 drawable ic_email
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_location
+drawable ic_pause
 drawable ic_phone
+drawable ic_record
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -705,6 +710,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id cancel_btn
 id card_view
 id center
 id center_horizontal
@@ -762,6 +768,7 @@ id message
 id middle
 id multiply
 id never
+id new_recording
 id none
 id normal
 id notification_background
@@ -769,6 +776,7 @@ id notification_main_column
 id notification_main_column_container
 id parentPanel
 id password
+id pause
 id phone
 id phone_no
 id post_num
@@ -778,6 +786,9 @@ id profile_update_btn
 id progress_circular
 id progress_horizontal
 id radio
+id record
+id record_back_to_main
+id record_upload_btn
 id registerButton
 id right
 id right_icon
@@ -875,6 +886,7 @@ layout activity_login
 layout activity_main
 layout activity_profile
 layout activity_profile_edit
+layout activity_recording
 layout activity_register
 layout notification_action
 layout notification_action_tombstone

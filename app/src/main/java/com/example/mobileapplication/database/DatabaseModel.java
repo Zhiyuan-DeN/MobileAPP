@@ -18,6 +18,7 @@ import java.util.Objects;
 
 public class DatabaseModel {
     private final String TAG = "DatabaseModel";
+    User globalUser;
 
     private static DatabaseModel instance;
     private FirebaseFirestore db;
@@ -101,51 +102,15 @@ public class DatabaseModel {
                 });
     }
 
-    public void updateUserProfile(String oldUserName, String userName, String description,
-                                  String email,
-                                  String location, RequestResponse requestResponse) {
-        DocumentReference user = db.collection("Users")
-                .document(oldUserName);
-        HashMap<String, Object> map = new HashMap();
-        map.put("userName", userName);
-        map.put("description", description);
-        map.put("email", email);
-        map.put("location", location);
-        user.update(map).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                requestResponse.onSuccess(null);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                requestResponse.onError(e);
-            }
-        });
-    }
-
-    public User getUserInfo(String userName, RequestResponse requestResponse) {
-        User user = new User();
+    public void updateUserProfile(User user,RequestResponse requestResponse) {
         db.collection("Users")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                .document(user.getUserName())
+                .set(user)
+                //.add(user.toMap())
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Map<String, Object> data = document.getData();
-                                if (Objects.equals(data.get("UserName"), userName)) {
-                                    user.setDescription(data.get("Description").toString());
-                                    user.setEmail(data.get("Email").toString());
-                                    user.setPassWord(data.get("Password").toString());
-                                    user.setPhoneNum(data.get("PhoneNum").toString());
-                                    user.setDocument(data.get("UserID").toString());
-                                    user.setUserName(data.get("UserName").toString());
-                                    user.setLocation(data.get("location").toString());
-                                }
-                            }
-                        }
-                        requestResponse.onError(new RuntimeException("login error"));
+                    public void onSuccess(Void unused) {
+                        requestResponse.onSuccess(user);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -154,8 +119,32 @@ public class DatabaseModel {
                         requestResponse.onError(e);
                     }
                 });
-        return user;
     }
+    public void getUserInfo(String userName, RequestResponse requestResponse) {
+        db.collection("Users")
+                .document(userName)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        globalUser = documentSnapshot.toObject(User.class);
+                        if (globalUser == null) {
+                            requestResponse.onError(new RuntimeException());
+                        } else if (globalUser.getUserName().equals(userName)) {
+                            requestResponse.onSuccess(globalUser);
+                        } else {
+                            requestResponse.onError(new RuntimeException());
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        requestResponse.onError(e);
+                    }
+                });
+    }
+
 
     public interface RequestResponse {
         void onSuccess(User user);

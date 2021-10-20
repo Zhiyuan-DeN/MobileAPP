@@ -15,6 +15,9 @@ import android.util.Patterns;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mobileapplication.database.DatabaseModel;
+import com.example.mobileapplication.database.User;
+
 public class ProfileEditActivity extends AppCompatActivity {
     Spinner select_zodiac;
     EditText usr_description, email, location, phone;
@@ -22,11 +25,13 @@ public class ProfileEditActivity extends AppCompatActivity {
     String unable_edt_name, edit_description, edit_email, edit_location, edit_phone;
     TextView unchangeable_usr_name;
     String j;
+    User globalUser;
 
     Spinner select;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        globalUser = MainActivity.globalUser;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_edit);
@@ -49,13 +54,26 @@ public class ProfileEditActivity extends AppCompatActivity {
             public void onClick(View v) {
                 update_profile();
                 if (valid_input() == true) {
-                    Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                    intent.putExtra("unable_edt_name", unable_edt_name);
-                    intent.putExtra("edit_description", edit_description);
-                    intent.putExtra("edit_email", edit_email);
-                    intent.putExtra("edit_location", edit_location);
-                    intent.putExtra("edit_phone", edit_phone);
-                    startActivity(intent);
+                    globalUser.setUserName(unable_edt_name);
+                    globalUser.setDescription(edit_description);
+                    globalUser.setEmail(edit_email);
+                    globalUser.setLocation(edit_location);
+                    globalUser.setPhoneNum(edit_phone);
+                    MainActivity.globalUser = globalUser;
+                    DatabaseModel.getInstance().updateUserProfile(globalUser,
+                            new DatabaseModel.RequestResponse() {
+                                @Override
+                                public void onSuccess(User user) {
+                                    Toast.makeText(getApplicationContext(), "Update Info Successful", Toast.LENGTH_SHORT).show();
+                                    globalUser = user;
+                                    ProfileEditActivity.this.finish();
+                                }
+                                @Override
+                                public void onError(Exception e) {
+                                    Toast.makeText(getApplicationContext(), "Update Info Failed",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            });
                 }
             }
         });
@@ -79,7 +97,7 @@ public class ProfileEditActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
-                startActivity(i);
+                ProfileEditActivity.this.finish();
             }
         });
     }

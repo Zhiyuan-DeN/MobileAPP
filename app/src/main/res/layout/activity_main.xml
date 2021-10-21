@@ -38,7 +38,7 @@
 
             android:background="@color/colorEggshell"
             android:ellipsize="middle"
-            android:text="NEW RECORDING"
+            android:text="GO TO PROFILE"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />

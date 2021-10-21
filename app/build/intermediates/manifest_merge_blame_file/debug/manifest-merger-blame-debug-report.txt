@@ -26,7 +26,7 @@
 16-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:26:22-107
 17
 18    <application
-18-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:4:5-31:19
+18-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:4:5-30:19
 19        android:allowBackup="true"
 19-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:5:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -79,95 +79,92 @@
 47        <activity android:name="com.example.mobileapplication.RegisterActivity" />
 47-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:29:9-53
 47-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:29:19-51
-48        <activity android:name="com.example.mobileapplication.RecordActivity" />
-48-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:30:9-51
-48-->/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:30:19-49
-49
-50        <service
-50-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:17:9-23:19
-51            android:name="com.google.firebase.components.ComponentDiscoveryService"
-51-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:18:13-84
-52            android:directBootAware="true"
-52-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
-53            android:exported="false" >
-53-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:19:13-37
-54            <meta-data
-54-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:20:13-22:85
-55                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-55-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:21:17-111
-56                android:value="com.google.firebase.components.ComponentRegistrar" />
-56-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:22:17-82
-57            <meta-data
-57-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:30:13-32:85
-58                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-58-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:31:17-139
-59                android:value="com.google.firebase.components.ComponentRegistrar" />
-59-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:32:17-82
-60            <meta-data
-60-->[com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
-61                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-61-->[com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
-62                android:value="com.google.firebase.components.ComponentRegistrar" />
-62-->[com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
-63        </service>
-64
-65        <activity
-65-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-66            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-66-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-67            android:exported="false"
-67-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-68            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-68-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-69
-70        <receiver
-70-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20
-71            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-71-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:30:13-85
-72            android:enabled="true"
-72-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:31:13-35
-73            android:exported="false" >
-73-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:32:13-37
-74        </receiver>
-75
-76        <service
-76-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:35:9-38:40
-77            android:name="com.google.android.gms.measurement.AppMeasurementService"
-77-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:36:13-84
-78            android:enabled="true"
-78-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:37:13-35
-79            android:exported="false" />
-79-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:38:13-37
-80        <service
-80-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:39:9-43:72
-81            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-81-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:40:13-87
-82            android:enabled="true"
-82-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:41:13-35
-83            android:exported="false"
-83-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:42:13-37
-84            android:permission="android.permission.BIND_JOB_SERVICE" />
-84-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:43:13-69
-85
-86        <provider
-86-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
-87            android:name="com.google.firebase.provider.FirebaseInitProvider"
-87-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-88            android:authorities="com.example.mobileapplication.firebaseinitprovider"
-88-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
-90            android:exported="false"
-90-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
-91            android:initOrder="100" />
-91-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
-92
-93        <meta-data
-93-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/da59dacec0ba6580e11a09a7e3c44ed6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-94            android:name="com.google.android.gms.version"
-94-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/da59dacec0ba6580e11a09a7e3c44ed6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-95            android:value="@integer/google_play_services_version" />
-95-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/da59dacec0ba6580e11a09a7e3c44ed6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-96    </application>
-97
-98</manifest>
+48
+49        <service
+49-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:17:9-23:19
+50            android:name="com.google.firebase.components.ComponentDiscoveryService"
+50-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:18:13-84
+51            android:directBootAware="true"
+51-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+52            android:exported="false" >
+52-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:19:13-37
+53            <meta-data
+53-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:20:13-22:85
+54                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+54-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:21:17-111
+55                android:value="com.google.firebase.components.ComponentRegistrar" />
+55-->[com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:22:17-82
+56            <meta-data
+56-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:30:13-32:85
+57                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+57-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:31:17-139
+58                android:value="com.google.firebase.components.ComponentRegistrar" />
+58-->[com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:32:17-82
+59            <meta-data
+59-->[com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+60                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+60-->[com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+61                android:value="com.google.firebase.components.ComponentRegistrar" />
+61-->[com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+62        </service>
+63
+64        <activity
+64-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+65            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+65-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+66            android:exported="false"
+66-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+67            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+67-->[com.google.android.gms:play-services-base:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/82c0cacfe02a1c24643eccf1584f03c3/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+68
+69        <receiver
+69-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20
+70            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+70-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:30:13-85
+71            android:enabled="true"
+71-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:31:13-35
+72            android:exported="false" >
+72-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:32:13-37
+73        </receiver>
+74
+75        <service
+75-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:35:9-38:40
+76            android:name="com.google.android.gms.measurement.AppMeasurementService"
+76-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:36:13-84
+77            android:enabled="true"
+77-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:37:13-35
+78            android:exported="false" />
+78-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:38:13-37
+79        <service
+79-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:39:9-43:72
+80            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+80-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:40:13-87
+81            android:enabled="true"
+81-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:41:13-35
+82            android:exported="false"
+82-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:42:13-37
+83            android:permission="android.permission.BIND_JOB_SERVICE" />
+83-->[com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:43:13-69
+84
+85        <provider
+85-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+86            android:name="com.google.firebase.provider.FirebaseInitProvider"
+86-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+87            android:authorities="com.example.mobileapplication.firebaseinitprovider"
+87-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+88            android:directBootAware="true"
+88-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+89            android:exported="false"
+89-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+90            android:initOrder="100" />
+90-->[com.google.firebase:firebase-common:20.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/646a13123d3a56ea4bab8f177db27ca2/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+91
+92        <meta-data
+92-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/da59dacec0ba6580e11a09a7e3c44ed6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+93            android:name="com.google.android.gms.version"
+93-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/da59dacec0ba6580e11a09a7e3c44ed6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+94            android:value="@integer/google_play_services_version" />
+94-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/da59dacec0ba6580e11a09a7e3c44ed6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+95    </application>
+96
+97</manifest>

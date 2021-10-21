@@ -18,11 +18,18 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class Recorder {
-    private boolean recording;
+    private boolean recording = false;
     private AudioTrack audioTrack;
 
     public void setRecording(boolean b){
         recording = b;
+    }
+
+    public void transfer(){
+        if(recording){
+            recording = false;
+        }
+        else recording = true;
     }
 
     public boolean getRecording(){

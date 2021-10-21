@@ -33,12 +33,11 @@ public class RecordActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        r.setRecording(true);
-                        file = r.startRecord();
+                        r.transfer();
+                        if(r.getRecording()) file = r.startRecord();
 
                     }
                 });
-                RecordActivity.this.finish();
             }
         });
 
@@ -56,7 +55,6 @@ public class RecordActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                RecordActivity.this.finish();
             }
         });
 

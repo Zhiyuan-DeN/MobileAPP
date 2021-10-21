@@ -860,6 +860,10 @@
         "source": "/Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/26056899fe7a685b36e8edd69b517537/appcompat-1.0.2/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
+        "merged": "/Users/xiaohanwei/Downloads/MobileAPP/app/build/intermediates/res/merged/debug/drawable_ic_play.png.flat",
+        "source": "/Users/xiaohanwei/Downloads/MobileAPP/app/src/main/res/drawable/ic_play.png"
+    },
+    {
         "merged": "/Users/xiaohanwei/Downloads/MobileAPP/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/26056899fe7a685b36e8edd69b517537/appcompat-1.0.2/res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },

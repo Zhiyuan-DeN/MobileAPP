@@ -66,7 +66,7 @@ public class Recorder {
     }
 
     public File startRecord(){
-        File recordFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), "record.pcm");
+        File recordFile = new File("data/data/com.example.mobileapplication/record.pcm");
         try {
             recordFile.createNewFile();
         } catch (IOException e) {

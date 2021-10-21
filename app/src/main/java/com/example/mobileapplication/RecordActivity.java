@@ -1,12 +1,15 @@
 package com.example.mobileapplication;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.example.mobileapplication.record.Recorder;
 
@@ -37,11 +40,11 @@ public class RecordActivity extends AppCompatActivity {
                         if(r.getRecording()) file = r.startRecord();
 
                     }
-                });
+                }).start();
             }
         });
 
-
+        checkRecordPermission();
 
         //pause button
         pause = (ImageButton)findViewById(R.id.pause);
@@ -67,6 +70,15 @@ public class RecordActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private void checkRecordPermission() {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO},
+                    123);
+        }
     }
 
     protected void onDestroy(){

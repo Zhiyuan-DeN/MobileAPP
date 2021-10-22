@@ -41,18 +41,18 @@
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="305dp"
+        android:layout_height="335dp"
         android:background="@color/colorWhite">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="255dp"
+            android:layout_height="285dp"
             android:background="@drawable/ic_bg_smoke"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/record"
+                android:id="@+id/msg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -71,7 +71,7 @@
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_marginTop="215dp"
+            android:layout_marginTop="240dp"
             app:cardCornerRadius="15dp" >
 
             <LinearLayout
@@ -85,11 +85,13 @@
                 <ImageButton
                     android:id="@+id/start"
                     android:gravity="center"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_record"
                     android:background="@drawable/circle_shadows"
+
                     tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <View
@@ -97,18 +99,57 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
+<!--                <ImageButton-->
+<!--                    android:id="@+id/pause"-->
+
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_pause"-->
+<!--                    android:background="@drawable/circle_shadows"-->
+<!--                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
                 <ImageButton
-                    android:id="@+id/pause"
+                    android:id="@+id/play"
                     android:gravity="center"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_pause"
+                    android:src="@drawable/ic_play"
                     android:background="@drawable/circle_shadows"
                     tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginHorizontal="25dp"-->
+<!--        android:layout_marginTop="35dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/msg"-->
+<!--            android:layout_width="301dp"-->
+<!--            android:layout_height="83dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:gravity="center"-->
+<!--            android:inputType="text"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/colorSecondaryText"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />-->
+<!--    </LinearLayout>-->
 
 
 

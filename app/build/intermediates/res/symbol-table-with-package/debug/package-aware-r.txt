@@ -654,6 +654,7 @@ drawable ic_launcher_foreground
 drawable ic_location
 drawable ic_pause
 drawable ic_phone
+drawable ic_play
 drawable ic_record
 drawable notification_action_background
 drawable notification_bg
@@ -766,6 +767,7 @@ id location
 id login
 id message
 id middle
+id msg
 id multiply
 id never
 id new_recording
@@ -776,9 +778,9 @@ id notification_main_column
 id notification_main_column_container
 id parentPanel
 id password
-id pause
 id phone
 id phone_no
+id play
 id post_num
 id profile_image
 id profile_reset_btn
@@ -786,7 +788,6 @@ id profile_update_btn
 id progress_circular
 id progress_horizontal
 id radio
-id record
 id record_back_to_main
 id record_upload_btn
 id registerButton

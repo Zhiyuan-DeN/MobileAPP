@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -18,8 +19,8 @@ import java.io.IOException;
 
 public class RecordActivity extends AppCompatActivity {
     ImageButton back_to_main;
-    ImageButton start;
-    ImageButton pause;
+    ImageButton start_or_pause, pause, play;
+    TextView text;
 
     File file;
     Recorder r = new Recorder();
@@ -28,17 +29,22 @@ public class RecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recording);
 
+        text = findViewById(R.id.msg);
+
         //start button
-        start = (ImageButton)findViewById(R.id.start);
-        start.setOnClickListener(new View.OnClickListener(){
+        start_or_pause = (ImageButton)findViewById(R.id.start);
+        start_or_pause.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                text.setText("Start Recording...");
+                start_or_pause.setImageResource(R.drawable.ic_pause);
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         r.transfer();
                         if(r.getRecording()) file = r.startRecord();
-
+                        text.setText("Finish Recording");
+                        start_or_pause.setImageResource(R.drawable.ic_record);
                     }
                 }).start();
             }
@@ -46,14 +52,15 @@ public class RecordActivity extends AppCompatActivity {
 
         checkRecordPermission();
 
-        //pause button
-        pause = (ImageButton)findViewById(R.id.pause);
-        pause.setOnClickListener(new View.OnClickListener(){
+        //play button
+        play = (ImageButton)findViewById(R.id.play);
+        play.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 if(file.exists()){
                     try {
                         r.playRecord(file);
+                        text.setText("Playing Audio");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

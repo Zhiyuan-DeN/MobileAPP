@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f2314b6d6415475656d34a9c1ddff1f3/jetified-circleimageview-2.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/26056899fe7a685b36e8edd69b517537/appcompat-1.0.2/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:2:1-26:12
@@ -54,25 +54,87 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/xiaohanwei/.gradle/ca
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/d8925235d7751855cc3ddac81a08c899/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/18a7a7f7a747d1dc47a0e7328f57e8ec/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/3c239d857bb742b3fdb214a04c8079f8/grpc-android-1.28.0/AndroidManifest.xml:2:1-13:12
-INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
 	package
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:2:5-44
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:2:5-51
 	android:versionCode
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-34:12
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:1-43:12
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:4:5-80
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:4:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:5:22-77
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:6:5-110
+	tools:ignore
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:6:80-108
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:6:22-79
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:7:5-70
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:7:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.INTERNET
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:9:5-66
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:10:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:11:5-78
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/3c239d857bb742b3fdb214a04c8079f8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/3c239d857bb742b3fdb214a04c8079f8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:11:22-76
 application
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:4:5-31:19
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:13:5-40:19
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f2314b6d6415475656d34a9c1ddff1f3/jetified-circleimageview-2.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f2314b6d6415475656d34a9c1ddff1f3/jetified-circleimageview-2.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:16:5-24:19
@@ -114,53 +176,53 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/xiao
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/4cbf065f690edbeb000c145e1e9d2611/core-1.0.1/AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:7:9-41
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:6:9-43
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:5:9-35
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:10:9-40
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:19:9-40
 activity#com.example.mobileapplication.LoginActivity
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:11:9-18:20
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:20:9-27:20
 	android:exported
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:13:13-36
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:12:13-42
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:21:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:14:13-17:29
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:25:27-74
 activity#com.example.mobileapplication.ProfileActivity
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:26:9-53
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:35:9-53
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:26:19-50
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:35:19-50
 activity#com.example.mobileapplication.ProfileEditActivity
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:27:9-57
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:36:9-57
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:27:19-54
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:36:19-54
 activity#com.example.mobileapplication.MainActivity
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:28:9-49
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:37:9-49
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:28:19-47
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:37:19-47
 activity#com.example.mobileapplication.RegisterActivity
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:29:9-53
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:38:9-53
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:29:19-51
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:38:19-51
 activity#com.example.mobileapplication.RecordActivity
-ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:30:9-51
+ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:39:9-51
 	android:name
-		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:30:19-49
+		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml:39:19-49
 uses-sdk
 INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
@@ -275,36 +337,6 @@ INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
 		ADDED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/xiaohanwei/Downloads/MobileAPP/app/src/main/AndroidManifest.xml
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:5-79
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/3c239d857bb742b3fdb214a04c8079f8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/3c239d857bb742b3fdb214a04c8079f8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:13:22-76
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/74944b67ee8d02c69ec8638692744961/play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/84ae3cca8b26927f36cb12e7c94fe9e2/firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/b03646f97b6a2a7527ac4ee157ac72c1/play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/20469a6d64ecbc2fac02076057c1dff5/play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:14:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore:23.0.3] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/f6906199b5cb29a7dc3c3503e8e887cb/jetified-firebase-firestore-23.0.3/AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /Users/xiaohanwei/.gradle/caches/transforms-2/files-2.1/2af858b2f385428b4b33ea8f4d56d18e/play-services-measurement-api-19.0.1/AndroidManifest.xml:27:9-33:19

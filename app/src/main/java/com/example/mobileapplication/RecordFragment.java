@@ -1,6 +1,7 @@
 package com.example.mobileapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,7 @@ public class RecordFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
+        Log.d("Tag", "RecordFragment.onDestroyView() has been called.");
         super.onDestroyView();
         binding = null;
     }

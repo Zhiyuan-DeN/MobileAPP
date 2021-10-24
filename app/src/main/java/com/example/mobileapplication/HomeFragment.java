@@ -2,6 +2,7 @@ package com.example.mobileapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,10 +27,9 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     public static User globalUser;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d("Tag", "oncreateview has been called.");
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
         Button profileEditButton = binding.jumpToProfile;
         Intent intent = getActivity().getIntent();
         final String userName = intent.getStringExtra("userName");
+
         profileEditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,6 +87,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        Log.d("Tag", "HomeFragment.onDestroyView() has been called.");
         binding = null;
     }
 }

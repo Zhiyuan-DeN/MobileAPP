@@ -6,7 +6,6 @@ INJECTED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\Andro
 INJECTED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidManifest.xml:1:1-34:12
 MERGED from [androidx.databinding:databinding-adapters:3.5.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\ff3b2cccc5439874a49951decfc0f26c\databinding-adapters-3.5.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:3.5.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\255cc5f32f85f3201e5f370097b10a65\databinding-runtime-3.5.2\AndroidManifest.xml:17:1-24:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\0f7a239e7c1bc00c9df1b778caad7de0\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\608f57ca8c7b93fdc9cec99f3c63b358\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\673c99716e4ddb122f81967d4826e58d\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
@@ -14,6 +13,7 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\zzzl0\.gradle\caches\t
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b557213243cd5e9b3c78858e55ae8c23\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2f2fac25b562e27acdae8989f2b3f97d\firebase-analytics-19.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\5ee721e38d760ef71626716f6a47ef77\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\7a477faa151809695e6ec6b8510c6d68\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\37a316c7abe32e2cbc7737679cdfb655\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\4505623704f8dc47b96bc7da6bcc5786\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -95,8 +95,6 @@ INJECTED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\Andro
 		ADDED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidManifest.xml:1:11-69
 application
 ADDED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidManifest.xml:4:5-31:19
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\608f57ca8c7b93fdc9cec99f3c63b358\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\608f57ca8c7b93fdc9cec99f3c63b358\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\673c99716e4ddb122f81967d4826e58d\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -105,6 +103,8 @@ MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\zzzl0\.grad
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b557213243cd5e9b3c78858e55ae8c23\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2f2fac25b562e27acdae8989f2b3f97d\firebase-analytics-19.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2f2fac25b562e27acdae8989f2b3f97d\firebase-analytics-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\74944b67ee8d02c69ec8638692744961\play-services-measurement-19.0.1\AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\74944b67ee8d02c69ec8638692744961\play-services-measurement-19.0.1\AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\41cfadff36b0d0da8e69c55e0256c989\play-services-measurement-sdk-19.0.1\AndroidManifest.xml:22:5-23:19
@@ -195,8 +195,6 @@ MERGED from [androidx.databinding:databinding-adapters:3.5.2] C:\Users\zzzl0\.gr
 MERGED from [androidx.databinding:databinding-adapters:3.5.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\ff3b2cccc5439874a49951decfc0f26c\databinding-adapters-3.5.2\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.5.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\255cc5f32f85f3201e5f370097b10a65\databinding-runtime-3.5.2\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.5.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\255cc5f32f85f3201e5f370097b10a65\databinding-runtime-3.5.2\AndroidManifest.xml:22:5-44
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\0f7a239e7c1bc00c9df1b778caad7de0\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\0f7a239e7c1bc00c9df1b778caad7de0\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\608f57ca8c7b93fdc9cec99f3c63b358\material-1.4.0\AndroidManifest.xml:20:5-44
@@ -211,6 +209,8 @@ MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\zzzl0\.grad
 MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2f2fac25b562e27acdae8989f2b3f97d\firebase-analytics-19.0.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\5ee721e38d760ef71626716f6a47ef77\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\5ee721e38d760ef71626716f6a47ef77\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\2e682a39df5f37c73f8c034e7ee1939e\jetified-circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\7a477faa151809695e6ec6b8510c6d68\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\7a477faa151809695e6ec6b8510c6d68\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\37a316c7abe32e2cbc7737679cdfb655\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41

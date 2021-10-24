@@ -1,24 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ProfileFragment">
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        tools:context="com.example.mobileapplication.ProfileActivity" >
 
-        <TextView
-            android:id="@+id/text_profile"
+
+        <RelativeLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
+            android:layout_height="325dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@color/colorEggshell"
+                android:orientation="vertical" >
+
+
+                <!--AVATAR USRNAME DESCRIPTION-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/default_avatar"
+                    app:civ_border_color="@color/colorWhite"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/usr_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:hint="USER NAME"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/usr_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/usr_name"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:hint="Descriptions..."
+                    android:inputType="text"
+                    android:maxLength="35"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!--CARD-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="325dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="240dp"
+                app:cardCornerRadius="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <TextView
+                            android:id="@+id/post_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/colorDeepCoffee"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Posts"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/follower_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/colorDeepCoffee"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Followers"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <TextView
+                            android:id="@+id/following_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/colorDeepCoffee"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Following"
+                            android:textSize="16dp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <!--INFO-->
+        <LinearLayout
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical"
+            android:layout_gravity="center" >
+            <LinearLayout
+                android:paddingLeft="45dp"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_color="@color/colorMilk"
+                    app:civ_border_width="2dp"
+                    android:src="@drawable/ic_email"
+                    android:background="@drawable/circle_shadows" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMAIL" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:inputType="text"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:paddingLeft="45dp"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_color="@color/colorMilk"
+                    app:civ_border_width="2dp"
+                    android:src="@drawable/ic_location"
+                    android:background="@drawable/circle_shadows" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOCATION" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:inputType="text"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="45dp"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <!--            <ImageView-->
+                <!--                android:layout_width="40dp"-->
+                <!--                android:layout_height="40dp"-->
+                <!--                app:civ_border_color="@color/colorMilk"-->
+                <!--                app:civ_border_width="2dp"-->
+                <!--                android:src="@drawable/ic_phone"-->
+                <!--                android:background="@drawable/circle_shadows" />-->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_color="@color/colorMilk"
+                    app:civ_border_width="2dp"
+                    android:src="@drawable/ic_phone"
+                    android:background="@drawable/circle_shadows" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHONE" />
+                    <!--                <TextView-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:text="ZODIAC" />-->
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:inputType="text"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/zodiac"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_gravity="center_vertical"-->
+                    <!--                    android:hint=""-->
+                    <!--                    android:textColorHint="@color/colorGray"-->
+                    <!--                    android:inputType="text"-->
+                    <!--                    android:textSize="16dp"-->
+                    <!--                    android:textStyle="bold"-->
+                    <!--                    tools:ignore="TouchTargetSizeCheck" />-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="118dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal"
+            android:paddingTop="50dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="59dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/colorEggshell"
+                android:ellipsize="middle"
+                android:text="EDIT"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/back_to_main_btn"
+                android:layout_width="59dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/colorEggshell"
+                android:ellipsize="middle"
+                android:text="BACK"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        </LinearLayout>
+    </LinearLayout>
 </layout>

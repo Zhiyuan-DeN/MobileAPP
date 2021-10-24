@@ -2170,6 +2170,7 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id jump_to_profile
 id labeled
 id layout
 id left
@@ -2258,6 +2259,7 @@ id navigation_record
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id new_recording
 id noScroll
 id noState
 id none
@@ -2396,6 +2398,7 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textRecord
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2406,7 +2409,6 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_profile
-id text_record
 id textinput_counter
 id textinput_error
 id textinput_helper_text

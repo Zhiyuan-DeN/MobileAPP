@@ -155,9 +155,9 @@ public final class R {
         public static final int tag_unhandled_key_listeners = 0x7f0901cc;
         public static final int text = 0x7f0901d2;
         public static final int text2 = 0x7f0901d3;
-        public static final int time = 0x7f0901e7;
-        public static final int title = 0x7f0901e8;
-        public static final int visible_removing_fragment_view_tag = 0x7f090207;
+        public static final int time = 0x7f0901e6;
+        public static final int title = 0x7f0901e7;
+        public static final int visible_removing_fragment_view_tag = 0x7f090206;
     }
     public static final class integer {
         private integer() {}

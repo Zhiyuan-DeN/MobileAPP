@@ -149,8 +149,8 @@ public final class R {
         public static final int tag_window_insets_animation_callback = 0x7f0901cd;
         public static final int text = 0x7f0901d2;
         public static final int text2 = 0x7f0901d3;
-        public static final int time = 0x7f0901e7;
-        public static final int title = 0x7f0901e8;
+        public static final int time = 0x7f0901e6;
+        public static final int title = 0x7f0901e7;
     }
     public static final class integer {
         private integer() {}

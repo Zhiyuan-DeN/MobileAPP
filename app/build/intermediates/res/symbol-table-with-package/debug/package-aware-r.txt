@@ -2396,7 +2396,6 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
-id textRecord
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart

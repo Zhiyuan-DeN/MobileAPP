@@ -14,6 +14,8 @@ import com.example.mobileapplication.databinding.ActivityMainBinding;
 import com.example.mobileapplication.database.DatabaseModel;
 import com.example.mobileapplication.database.User;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         // NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+        ButterKnife.bind(this);
     }
 
 }

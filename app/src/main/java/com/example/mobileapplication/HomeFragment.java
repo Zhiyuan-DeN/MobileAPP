@@ -6,7 +6,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,69 +17,69 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.mobileapplication.R;
 import com.example.mobileapplication.database.DatabaseModel;
 import com.example.mobileapplication.database.User;
 import com.example.mobileapplication.databinding.FragmentHomeBinding;
 
+import java.util.ArrayList;
+
+
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
-    public static User globalUser;
+    int layout = R.layout.fragment_home;
+    ListView listView;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.d("Tag", "oncreateview has been called.");
-
+        User user = MainActivity.globalUser;
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Button new_record = binding.newRecording;
-        new_record.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(),RecordActivity.class);
-                startActivity(i);
-
-            }
-        });
-
-        Button profileEditButton = binding.jumpToProfile;
-        Intent intent = getActivity().getIntent();
-        final String userName = intent.getStringExtra("userName");
-
-        profileEditButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(),ProfileActivity.class);
-
-                if (userName != null) {
-                    i.putExtra("userName", userName);
-
-                    DatabaseModel.getInstance().getUserInfo(userName, new DatabaseModel.RequestResponse() {
-                        @Override
-                        public void onSuccess(User user) {
-                            Toast.makeText(getActivity().getApplicationContext(), "Get Info Successful", Toast.LENGTH_SHORT).show();
-                            globalUser = user;
-                            startActivity(i);
-                        }
-
-                        @Override
-                        public void onError(Exception e) {
-                            Toast.makeText(getActivity().getApplicationContext(), "Get Info Failed",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            }
-        });
+        initializeList(root);
         return root;
+
+    }
+
+
+    // To bind ListView and RecyclerView to the corresponding layout
+    private void initializeList(View view) {
+        // To bind ListView adapter to ListView
+        PostAdapter adapter = new PostAdapter(getActivity(), R.layout.post_example, getPosts());
+        listView = view.findViewById(R.id.post_list_view);
+        listView.setAdapter(adapter);
+
+        // 下面这里加入播放语音
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Post post = (Post) adapterView.getItemAtPosition(i);
+                Toast.makeText(getContext(), post.getUserName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    // TODO 下面这里get所有posts
+    private ArrayList<Post> getPosts() {
+        ArrayList<Post> posts = new ArrayList<Post>();
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 1",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 2",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 3",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 4",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 5",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 6",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 7",null));
+        posts.add(new Post(R.drawable.default_avatar, "Sample User 8",null));
+        return posts;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         Log.d("Tag", "HomeFragment.onDestroyView() has been called.");
-        binding = null;
+        //binding = null;
     }
 }

@@ -18,6 +18,8 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\zzzl0\.gradle\caches\tra
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\37a316c7abe32e2cbc7737679cdfb655\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\4505623704f8dc47b96bc7da6bcc5786\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\a56d65501cef191d252b329d6c9a0b00\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.jakewharton:butterknife:10.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\93924e664f03e94cc55c5a8a44585aca\butterknife-10.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton:butterknife-runtime:10.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\169e8888b5ca616855274b5f1f394ba4\butterknife-runtime-10.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b8230c6c1c4e83eff280e213048ddc4b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\955fde69343cfd4938247e11851a1870\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\74944b67ee8d02c69ec8638692744961\play-services-measurement-19.0.1\AndroidManifest.xml:17:1-46:12
@@ -281,6 +283,10 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\zzzl0\.g
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\4505623704f8dc47b96bc7da6bcc5786\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\a56d65501cef191d252b329d6c9a0b00\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\a56d65501cef191d252b329d6c9a0b00\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton:butterknife:10.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\93924e664f03e94cc55c5a8a44585aca\butterknife-10.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\93924e664f03e94cc55c5a8a44585aca\butterknife-10.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\169e8888b5ca616855274b5f1f394ba4\butterknife-runtime-10.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\169e8888b5ca616855274b5f1f394ba4\butterknife-runtime-10.1.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b8230c6c1c4e83eff280e213048ddc4b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b8230c6c1c4e83eff280e213048ddc4b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\955fde69343cfd4938247e11851a1870\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44

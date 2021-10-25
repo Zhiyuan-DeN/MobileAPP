@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
         listView = view.findViewById(R.id.post_list_view);
         listView.setAdapter(adapter);
 
-        // 下面这里加入播放语音
+        // 下面这里加入点击listview 之后的action（暂无）
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

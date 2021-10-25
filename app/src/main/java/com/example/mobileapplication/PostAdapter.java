@@ -46,6 +46,8 @@ public class PostAdapter extends ArrayAdapter<Post> {
         ImageButton play = currentItemView.findViewById(R.id.play);
         play.setFocusable(false);
         play.setFocusableInTouchMode(false);
+
+        // TODO 下面加入播放post内容
         play.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

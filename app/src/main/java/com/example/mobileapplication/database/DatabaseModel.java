@@ -2,19 +2,10 @@ package com.example.mobileapplication.database;
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 public class DatabaseModel {
     private final String TAG = "DatabaseModel";
@@ -102,7 +93,7 @@ public class DatabaseModel {
                 });
     }
 
-    public void updateUserProfile(User user,RequestResponse requestResponse) {
+    public void updateUserProfile(User user, RequestResponse requestResponse) {
         db.collection("Users")
                 .document(user.getUserName())
                 .set(user)
@@ -120,6 +111,7 @@ public class DatabaseModel {
                     }
                 });
     }
+
     public void getUserInfo(String userName, RequestResponse requestResponse) {
         db.collection("Users")
                 .document(userName)

@@ -41,15 +41,14 @@ public class HomeFragment extends Fragment {
 
         initializeList(root);
         return root;
-
     }
-
 
     // To bind ListView and RecyclerView to the corresponding layout
     private void initializeList(View view) {
         // To bind ListView adapter to ListView
         PostAdapter adapter = new PostAdapter(getPosts());
         recyclerView = view.findViewById(R.id.post_recycler);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         recyclerView.setAdapter(adapter);
     }
 

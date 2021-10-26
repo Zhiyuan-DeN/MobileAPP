@@ -37,6 +37,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             userProfileImage = view.findViewById(R.id.post_example_image);
             userName = view.findViewById(R.id.post_example_text);
             play = view.findViewById(R.id.play);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(view.getContext(), userName.getText(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
         public TextView getUserNameView() {
@@ -76,6 +82,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         viewHolder.getPlayView().setFocusable(false);
         viewHolder.getPlayView().setFocusableInTouchMode(false);
         //viewHolder.getPlayView().setText(localDataSet.get(position).getAudioTrack());
+        // TODO 下面加入播放post内容
+        viewHolder.getPlayView().setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Log.d("Tag", "play.onclick() has been called.");
+            }
+        });
     }
 
     @Override

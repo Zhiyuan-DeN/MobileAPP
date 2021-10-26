@@ -7,10 +7,17 @@
         android:orientation="vertical"
         tools:context=".HomeFragment">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/post_recycler"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/sr_refresh"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </LinearLayout>
 </layout>

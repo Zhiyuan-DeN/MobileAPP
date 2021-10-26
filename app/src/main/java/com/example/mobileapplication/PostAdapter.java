@@ -18,9 +18,8 @@ import com.example.mobileapplication.databinding.PostExampleBinding;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
@@ -86,7 +85,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         viewHolder.getPlayView().setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.d("Tag", "play.onclick() has been called.");
+                // 播放
             }
         });
     }
@@ -95,6 +94,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     // to get the size of the fruits array
     public int getItemCount() {
         return localDataSet.size();
+    }
+
+    public void addItem(Post new_post, int position){
+        this.localDataSet.add(position,new_post);
+        notifyItemInserted(position);
     }
 
 

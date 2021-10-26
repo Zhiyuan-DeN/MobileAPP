@@ -9949,8 +9949,8 @@ public final class R {
     public static final int postLayout=0x7f09016b;
     public static final int post_example_image=0x7f09016c;
     public static final int post_example_text=0x7f09016d;
-    public static final int post_list_view=0x7f09016e;
-    public static final int post_num=0x7f09016f;
+    public static final int post_num=0x7f09016e;
+    public static final int post_recycler=0x7f09016f;
     public static final int profile_image=0x7f090170;
     public static final int profile_reset_btn=0x7f090171;
     public static final int profile_update_btn=0x7f090172;

@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.mobileapplication.R;
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     int layout = R.layout.fragment_home;
-    ListView listView;
+    RecyclerView recyclerView;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         User user = MainActivity.globalUser;
@@ -47,19 +48,9 @@ public class HomeFragment extends Fragment {
     // To bind ListView and RecyclerView to the corresponding layout
     private void initializeList(View view) {
         // To bind ListView adapter to ListView
-        PostAdapter adapter = new PostAdapter(getActivity(), R.layout.post_example, getPosts());
-        listView = view.findViewById(R.id.post_list_view);
-        listView.setAdapter(adapter);
-
-        // 下面这里加入点击listview 之后的action（暂无）
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Post post = (Post) adapterView.getItemAtPosition(i);
-                Toast.makeText(getContext(), post.getUserName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
+        PostAdapter adapter = new PostAdapter(getPosts());
+        recyclerView = view.findViewById(R.id.post_recycler);
+        recyclerView.setAdapter(adapter);
     }
 
     // TODO 下面这里get所有posts

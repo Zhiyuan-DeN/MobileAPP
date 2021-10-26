@@ -2293,8 +2293,8 @@ id position
 id postLayout
 id post_example_image
 id post_example_text
-id post_list_view
 id post_num
+id post_recycler
 id profile_image
 id profile_reset_btn
 id profile_update_btn

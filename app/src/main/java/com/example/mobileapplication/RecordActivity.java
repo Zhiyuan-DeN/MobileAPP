@@ -14,6 +14,8 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.mobileapplication.oss.CloudStorageManager;
 import com.example.mobileapplication.record.Recorder;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.io.IOException;
@@ -85,14 +87,14 @@ public class RecordActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (file != null && file.exists()) {
                     CloudStorageManager.getInstance().uploadFile("testUserName", file,
-                            new CloudStorageManager.UploadCallback() {
+                            new CloudStorageManager.UploadCallback<UploadTask.TaskSnapshot>() {
                                 @Override
-                                public void onSuccess() {
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                                 }
 
                                 @Override
-                                public void onFail(@NonNull Exception exception) {
+                                public void onFail(Exception exception) {
 
                                 }
                             });

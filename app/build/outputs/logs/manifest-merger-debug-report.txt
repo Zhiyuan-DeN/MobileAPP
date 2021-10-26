@@ -20,6 +20,7 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\zzzl0\.g
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\a56d65501cef191d252b329d6c9a0b00\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b8230c6c1c4e83eff280e213048ddc4b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\00ff3f74daa156d0830230cba55d2250\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.gauravk.audiovisualizer:audiovisualizer:0.9.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\f42f87d930b5e5552ec5c64b0ff3083b\jetified-audiovisualizer-0.9.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\955fde69343cfd4938247e11851a1870\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\74944b67ee8d02c69ec8638692744961\play-services-measurement-19.0.1\AndroidManifest.xml:17:1-46:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\41cfadff36b0d0da8e69c55e0256c989\play-services-measurement-sdk-19.0.1\AndroidManifest.xml:17:1-25:12
@@ -111,6 +112,8 @@ ADDED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidM
 		ADDED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidManifest.xml:6:22-79
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidManifest.xml:7:5-70
+MERGED from [com.gauravk.audiovisualizer:audiovisualizer:0.9.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\f42f87d930b5e5552ec5c64b0ff3083b\jetified-audiovisualizer-0.9.2\AndroidManifest.xml:9:5-71
+MERGED from [com.gauravk.audiovisualizer:audiovisualizer:0.9.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\f42f87d930b5e5552ec5c64b0ff3083b\jetified-audiovisualizer-0.9.2\AndroidManifest.xml:9:5-71
 	android:name
 		ADDED from C:\Users\zzzl0\Desktop\21S2\COMP90018\MobileAPP\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
@@ -285,6 +288,8 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\zzzl0\.gradl
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\b8230c6c1c4e83eff280e213048ddc4b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\00ff3f74daa156d0830230cba55d2250\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\00ff3f74daa156d0830230cba55d2250\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.gauravk.audiovisualizer:audiovisualizer:0.9.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\f42f87d930b5e5552ec5c64b0ff3083b\jetified-audiovisualizer-0.9.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.gauravk.audiovisualizer:audiovisualizer:0.9.2] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\f42f87d930b5e5552ec5c64b0ff3083b\jetified-audiovisualizer-0.9.2\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\955fde69343cfd4938247e11851a1870\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\955fde69343cfd4938247e11851a1870\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\zzzl0\.gradle\caches\transforms-2\files-2.1\74944b67ee8d02c69ec8638692744961\play-services-measurement-19.0.1\AndroidManifest.xml:20:5-44

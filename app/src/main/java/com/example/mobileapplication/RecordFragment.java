@@ -20,6 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.mobileapplication.R;
 import com.example.mobileapplication.databinding.FragmentRecordBinding;
 import com.example.mobileapplication.record.Recorder;
+import com.example.mobileapplication.shake.ShakeManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class RecordFragment extends Fragment {
     ImageButton back_to_main;
     ImageButton start_or_pause, pause, play;
     TextView text;
-
+    private ShakeManager shake;
     File file;
     Recorder r = new Recorder();
     private FragmentRecordBinding binding;
@@ -59,6 +60,27 @@ public class RecordFragment extends Fragment {
                 }).start();
             }
         });
+
+        //shake phone
+        shake.start();
+        shake.setShakeListener(new ShakeManager.ShakeListener() {
+            @Override
+            public void onShake() {
+
+                text.setText("Start Recording...");
+                start_or_pause.setImageResource(R.drawable.ic_pause);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        r.transfer();
+                        if (r.getRecording()) file = r.startRecord();
+                        text.setText("Finish Recording");
+                        start_or_pause.setImageResource(R.drawable.ic_record);
+                    }
+                }).start();
+            }
+        });
+
 
         checkRecordPermission();
 
@@ -94,6 +116,7 @@ public class RecordFragment extends Fragment {
     @Override
     public void onDestroyView() {
         Log.d("Tag", "RecordFragment.onDestroyView() has been called.");
+        shake.stop();
         super.onDestroyView();
         r.setRecording(false);
         r.releaseAudioTrack();

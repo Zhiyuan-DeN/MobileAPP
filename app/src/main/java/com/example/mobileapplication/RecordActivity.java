@@ -26,7 +26,7 @@ public class RecordActivity extends AppCompatActivity {
     Button mRecordUploadBtn;
     File file;
     Recorder r = new Recorder();
-    private ShakeManager shake;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,25 +72,7 @@ public class RecordActivity extends AppCompatActivity {
             }
         });
 
-        //shake phone
 
-        shake.setShakeListener(new ShakeManager.ShakeListener() {
-            @Override
-            public void onShake() {
-                text.setText("Start Recording...");
-                start_or_pause.setImageResource(R.drawable.ic_pause);
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        r.transfer();
-                        if (r.getRecording()) file = r.startRecord();
-                        text.setText("Finish Recording");
-                        start_or_pause.setImageResource(R.drawable.ic_record);
-                    }
-                }).start();
-            }
-        });
-        shake.start();
 
         //back to main page
         back_to_main = (ImageButton) findViewById(R.id.record_back_to_main);
@@ -138,7 +120,6 @@ public class RecordActivity extends AppCompatActivity {
 
     protected void onDestroy() {
         super.onDestroy();
-        shake.stop();
         r.setRecording(false);
         r.releaseAudioTrack();
     }

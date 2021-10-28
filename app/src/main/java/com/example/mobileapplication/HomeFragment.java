@@ -1,6 +1,7 @@
 package com.example.mobileapplication;
 
 import android.content.Intent;
+import android.icu.text.Edits;
 import android.media.AudioTrack;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,8 +27,16 @@ import com.example.mobileapplication.R;
 import com.example.mobileapplication.database.DatabaseModel;
 import com.example.mobileapplication.database.User;
 import com.example.mobileapplication.databinding.FragmentHomeBinding;
+import com.example.mobileapplication.oss.CloudStorageManager;
+import com.example.mobileapplication.utils.PathUtils;
+import com.google.firebase.storage.FileDownloadTask;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 public class HomeFragment extends Fragment {
@@ -57,20 +66,16 @@ public class HomeFragment extends Fragment {
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
     }
 
-    // TODO 下面这里get所有posts
     private ArrayList<Post> getPosts() {
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 1",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 2",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 3",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 4",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 5",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 6",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 7",null));
-        posts.add(new Post(R.drawable.default_avatar, "Sample User 8",null));
+        Map<File, String> postMap = LoginActivity.postMap;
+        for (File file: postMap.keySet()) {
+            System.out.println(file.getName()+":"+postMap.get(file));
+            posts.add(new Post(R.drawable.default_avatar, postMap.get(file), file));
+        }
         return posts;
     }
 
-    private void addPost(int profileImage, String userName, AudioTrack audioTrack) {
+    public void addPost(int profileImage, String userName, File audioTrack) {
         Post new_post = new Post(profileImage,userName,audioTrack);
         adapter.addItem(new_post,0);
     }

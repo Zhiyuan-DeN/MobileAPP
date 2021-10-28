@@ -73,10 +73,10 @@ public class RecordActivity extends AppCompatActivity {
         });
 
         //shake phone
+
         shake.setShakeListener(new ShakeManager.ShakeListener() {
             @Override
             public void onShake() {
-                shake.start();
                 text.setText("Start Recording...");
                 start_or_pause.setImageResource(R.drawable.ic_pause);
                 new Thread(new Runnable() {
@@ -88,10 +88,9 @@ public class RecordActivity extends AppCompatActivity {
                         start_or_pause.setImageResource(R.drawable.ic_record);
                     }
                 }).start();
-
-                shake.stop();
             }
         });
+        shake.start();
 
         //back to main page
         back_to_main = (ImageButton) findViewById(R.id.record_back_to_main);
@@ -139,6 +138,7 @@ public class RecordActivity extends AppCompatActivity {
 
     protected void onDestroy() {
         super.onDestroy();
+        shake.stop();
         r.setRecording(false);
         r.releaseAudioTrack();
     }

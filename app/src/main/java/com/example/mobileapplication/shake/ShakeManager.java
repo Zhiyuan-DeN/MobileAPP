@@ -56,7 +56,7 @@ public class ShakeManager implements SensorEventListener{
         lastZ = z;
 
         double speed = Math.sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ) / timeInterval * 10000;
-        if (speed >= SPEED_SHRESHOLD) {
+        if (speed != 0) {
             shakeListener.onShake();
         }
     }

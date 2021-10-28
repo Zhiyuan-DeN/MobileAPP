@@ -1,6 +1,7 @@
 package com.example.mobileapplication;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,7 +63,7 @@ public class RecordFragment extends Fragment {
         });
 
         //shake phone
-        shake.start();
+        shake = new ShakeManager(getContext());
         shake.setShakeListener(new ShakeManager.ShakeListener() {
             @Override
             public void onShake() {
@@ -80,7 +81,6 @@ public class RecordFragment extends Fragment {
                 }).start();
             }
         });
-
 
         checkRecordPermission();
 

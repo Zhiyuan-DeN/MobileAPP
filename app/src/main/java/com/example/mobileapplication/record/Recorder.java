@@ -58,6 +58,20 @@ public class Recorder {
         dataInputStream.close();
 
         i = 5000;
+
+        int max=4,min=1;
+        long randomNum = System.currentTimeMillis();
+        int ran3 = (int) (randomNum%(max-min)+min);
+        if (ran3 == 1) {
+            i = 6050;
+        }
+        if (ran3 == 2) {
+            i = 8500;
+        }
+        if (ran3 == 3) {
+            i = 16000;
+        }
+
         audioTrack = new AudioTrack(3, i, 2, 2, bufferSize, 1);
         audioTrack.play();
         audioTrack.write(data, 0, bufferSize);

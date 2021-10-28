@@ -27,7 +27,7 @@ public class CloudStorageManager {
         return instance;
     }
 
-    private CloudStorageManager() {
+    public CloudStorageManager() {
         storage = FirebaseStorage.getInstance();
     }
 

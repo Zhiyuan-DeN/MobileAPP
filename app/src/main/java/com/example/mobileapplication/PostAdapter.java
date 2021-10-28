@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobileapplication.databinding.PostExampleBinding;
+import com.example.mobileapplication.record.Recorder;
 
 import java.io.IOException;
 import java.util.List;
@@ -81,11 +82,15 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         viewHolder.getPlayView().setFocusable(false);
         viewHolder.getPlayView().setFocusableInTouchMode(false);
         //viewHolder.getPlayView().setText(localDataSet.get(position).getAudioTrack());
-        // TODO 下面加入播放post内容
         viewHolder.getPlayView().setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                // 播放
+                Recorder recorder = new Recorder();
+                try {
+                    recorder.playRecord(localDataSet.get(position).getAudioTrack());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

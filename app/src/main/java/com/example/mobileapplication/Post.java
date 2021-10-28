@@ -1,14 +1,14 @@
 package com.example.mobileapplication;
 
-import android.media.AudioTrack;
+import java.io.File;
 
 public class Post {
 
     private int profileImage; // ProfileImage to store the resource id
     private String userName;
-    private AudioTrack audioTrack; // audio
+    private File audioTrack; // audio
 
-    public Post(int profileImage, String userName, AudioTrack audioTrack) {
+    public Post(int profileImage, String userName, File audioTrack) {
         this.profileImage = profileImage;
         this.userName = userName;
         this.audioTrack = audioTrack;
@@ -31,11 +31,11 @@ public class Post {
         this.userName = userName;
     }
 
-    public AudioTrack getAudioTrack() {
+    public File getAudioTrack() {
         return audioTrack;
     }
 
-    public void setAudioTrack(AudioTrack audioTrack) {
+    public void setAudioTrack(File audioTrack) {
         this.audioTrack = audioTrack;
     }
 }

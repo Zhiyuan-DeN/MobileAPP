@@ -12,12 +12,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mobileapplication.database.DatabaseModel;
 import com.example.mobileapplication.database.User;
+import com.example.mobileapplication.oss.CloudStorageManager;
+import com.example.mobileapplication.utils.PathUtils;
+import com.google.firebase.storage.FileDownloadTask;
+
+import java.io.File;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class LoginActivity extends AppCompatActivity{
     Button button;
     EditText username;
     EditText password;
     TextView registerButton;
+    public static Map<File, String> postMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +50,39 @@ public class LoginActivity extends AppCompatActivity{
                         String ok = "Login Successful";
                         // Login Successful
                         Toast.makeText(LoginActivity.this,ok,Toast.LENGTH_SHORT).show();
+                        CloudStorageManager cloudStorageManager = new CloudStorageManager();
+                        cloudStorageManager.downloadFile(new CloudStorageManager.UploadCallback<FileDownloadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                File[] directoryList = new File(PathUtils.getDownloadPath()).listFiles();
 
-                        // Turn to main page
-                        Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                        i.putExtra("userName", user.getDocument());
-                        startActivity(i);
+                                postMap = new TreeMap<File, String>(new Comparator<File>() {
+                                    @Override
+                                    public int compare(File o1, File o2) {
+                                        return -o1.getName().compareTo(o2.getName());
+                                    }
+                                });
+
+                                for (File directory:directoryList) {
+                                    for (File file:directory.listFiles()) {
+                                        postMap.put(file, directory.getName());
+                                    }
+                                }
+
+                                // Turn to main page
+                                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                                i.putExtra("userName", user.getDocument());
+                                startActivity(i);
+                            }
+
+                            @Override
+                            public void onFail(Exception exception) {
+                                String fail = "Load Page Failed";
+                                // Login Successful
+                                Toast.makeText(LoginActivity.this,fail,Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                     }
 
                     @Override

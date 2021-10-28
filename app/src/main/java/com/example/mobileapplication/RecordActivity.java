@@ -8,13 +8,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.mobileapplication.oss.CloudStorageManager;
 import com.example.mobileapplication.record.Recorder;
-import com.google.firebase.storage.FileDownloadTask;
+import com.example.mobileapplication.shake.ShakeManager;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
@@ -27,6 +26,7 @@ public class RecordActivity extends AppCompatActivity {
     Button mRecordUploadBtn;
     File file;
     Recorder r = new Recorder();
+    private ShakeManager shake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,27 @@ public class RecordActivity extends AppCompatActivity {
             }
         });
 
+        //shake phone
+        shake.setShakeListener(new ShakeManager.ShakeListener() {
+            @Override
+            public void onShake() {
+                shake.start();
+                text.setText("Start Recording...");
+                start_or_pause.setImageResource(R.drawable.ic_pause);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        r.transfer();
+                        if (r.getRecording()) file = r.startRecord();
+                        text.setText("Finish Recording");
+                        start_or_pause.setImageResource(R.drawable.ic_record);
+                    }
+                }).start();
+
+                shake.stop();
+            }
+        });
+
         //back to main page
         back_to_main = (ImageButton) findViewById(R.id.record_back_to_main);
         back_to_main.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +124,8 @@ public class RecordActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     private void checkRecordPermission() {
 

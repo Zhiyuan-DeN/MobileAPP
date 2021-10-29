@@ -1,0 +1,21 @@
+################################################################################                     
+                    COMP90018 Programming Project Submission
+################################################################################
+
+Group No: T01/14-2
+
+Group Members:
+
+1: [Jiafu Zhang, jiafuz@student.unimelb.edu.au] 
+2: [Qimin Li, qimin@student.unimelb.edu.au] 
+3: [Xiaohan Wei, xwwei1@student.unimelb.edu.au] 
+4: [Yifan Cai, yifcai1@student.unimelb.edu.au] 
+5: [Zhiyuan Deng, dezd@student.unimelb.edu.au] 
+6: [Zoe Li, zoe1@student.unimelb.edu.au] 
+
+YouTube Link:
+
+Publicity statement: We authorise the University of Melbourne to use material from our submission for publicity.
+
+README:
+Please include details on how to compile and run your APP.

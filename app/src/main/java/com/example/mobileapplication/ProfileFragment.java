@@ -23,15 +23,21 @@ public class ProfileFragment extends Fragment {
     private FragmentProfileBinding binding;
     Button profile_edit, back_to_main;
     TextView usr_name, usr_description, email, location, phone;
+    Boolean allowRefresh = false;
 
     @Override
     public void onResume() {
         super.onResume();
-        //getActivity().finish();
-        //startActivity(getActivity().getIntent());
+        if (allowRefresh) {
+            allowRefresh = false;
+            getFragmentManager().beginTransaction().detach(this).attach(this).commit();
+        }
     }
 
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d("Tag", "ProfileFragment.onCreateView() has been called.");
+
         User user = MainActivity.globalUser;
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -94,7 +100,9 @@ public class ProfileFragment extends Fragment {
                 Intent i = new Intent(getActivity().getApplicationContext(),ProfileEditActivity.class);
                 if (userName != null) {
                     i.putExtra("userName", userName);
+                    allowRefresh = true;
                 }
+                onPause();
                 startActivity(i);
 
             }

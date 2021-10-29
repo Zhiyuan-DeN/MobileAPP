@@ -31,6 +31,7 @@ public class RecordFragment extends Fragment {
     ImageButton back_to_main;
     ImageButton start_or_pause, pause, play;
     TextView text;
+    User globalUser;
     private ShakeManager shake;
     File file;
     Recorder r = new Recorder();
@@ -95,6 +96,27 @@ public class RecordFragment extends Fragment {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                }
+            }
+        });
+        
+        mRecordUploadBtn = findViewById(R.id.record_upload_btn);
+        mRecordUploadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (file != null && file.exists()) {
+                    CloudStorageManager.getInstance().uploadFile(User.getUserName, file,
+                            new CloudStorageManager.UploadCallback<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                }
+
+                                @Override
+                                public void onFail(Exception exception) {
+
+                                }
+                            });
                 }
             }
         });

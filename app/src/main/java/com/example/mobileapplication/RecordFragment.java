@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -106,12 +107,14 @@ public class RecordFragment extends Fragment {
                             new CloudStorageManager.UploadCallback<UploadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
+                                    Toast.makeText(getContext(), "Upload Successful",
+                                            Toast.LENGTH_SHORT).show();
                                 }
 
                                 @Override
                                 public void onFail(Exception exception) {
-
+                                    Toast.makeText(getContext(), "Upload Failed",
+                                            Toast.LENGTH_SHORT).show();
                                 }
                             });
                 }

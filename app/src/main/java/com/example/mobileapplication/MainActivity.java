@@ -1,6 +1,8 @@
 package com.example.mobileapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -42,6 +44,24 @@ public class MainActivity extends AppCompatActivity {
 
         // NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+
+        Intent intent = getIntent();
+        final String userName = intent.getStringExtra("userName");
+
+        DatabaseModel.getInstance().getUserInfo(userName, new DatabaseModel.RequestResponse() {
+            @Override
+            public void onSuccess(User user) {
+                Toast.makeText(getApplicationContext(), "Get Info Successful", Toast.LENGTH_SHORT).show();
+                globalUser = user;
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Toast.makeText(getApplicationContext(), "Get Info Failed",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 }

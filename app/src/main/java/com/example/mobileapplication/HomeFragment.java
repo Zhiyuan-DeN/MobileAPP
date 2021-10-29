@@ -68,10 +68,14 @@ public class HomeFragment extends Fragment {
 
     private ArrayList<Post> getPosts() {
         Map<File, String> postMap = LoginActivity.postMap;
-        for (File file: postMap.keySet()) {
-            System.out.println(file.getName()+":"+postMap.get(file));
-            posts.add(new Post(R.drawable.default_avatar, postMap.get(file), file));
+        try {
+            for (File file: postMap.keySet()) {
+                posts.add(new Post(R.drawable.default_avatar, postMap.get(file), file));
+            }
+        } catch (Exception e) {
+
         }
+
         return posts;
     }
 

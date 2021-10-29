@@ -17,6 +17,7 @@ public class ShakeManager implements SensorEventListener{
     private float lastY;
     private float lastZ;
     private long lastUpdateTime;
+    private boolean first;
 
     public ShakeManager(Context c) {
         mContext = c;
@@ -25,6 +26,7 @@ public class ShakeManager implements SensorEventListener{
 
 
     public void start() {
+        first = false;
         sensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
         if (sensorManager != null) {
             sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -56,9 +58,10 @@ public class ShakeManager implements SensorEventListener{
         lastZ = z;
 
         double speed = Math.sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ) / timeInterval * 10000;
-        if (speed != 0) {
+        if (speed != 0 && first) {
             shakeListener.onShake();
         }
+        first = true;
     }
 
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}

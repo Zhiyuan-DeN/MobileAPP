@@ -1,6 +1,8 @@
 package com.example.mobileapplication;
 
 import android.Manifest;
+import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.mobileapplication.database.User;
 import com.example.mobileapplication.databinding.FragmentRecordBinding;
@@ -109,6 +112,34 @@ public class RecordFragment extends Fragment {
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                     Toast.makeText(getContext(), "Upload Successful",
                                             Toast.LENGTH_SHORT).show();
+
+                                    Intent returnIntent = new Intent();
+                                    getActivity().setResult(Activity.RESULT_OK, returnIntent);
+                                    getActivity().finish();
+
+                                    /*
+                                    FragmentManager fm = getActivity().getSupportFragmentManager();
+                                    HomeFragment homeFragment = (HomeFragment)fm.findFragmentById(R.id.navigation_home);
+                                    if(homeFragment == null) {
+                                        Log.d("Tag", "homeFragment is null");
+
+                                    }else {
+                                        homeFragment.addPost(R.drawable.default_avatar, User.getUserName(), file);
+                                    }
+
+                                    //getActivity().recreate();
+
+                                    Post new_post = new Post(R.drawable.default_avatar, User.getUserName(), file);
+                                    HomeFragment fragment = new HomeFragment();
+                                    Bundle bundle = new Bundle();
+                                    bundle.putSerializable("value",new_post);
+                                    fragment.setArguments(bundle);
+                                    getParentFragment().getChildFragmentManager()
+                                            .beginTransaction()
+                                            .replace(R.id.fragment_home, fragment, "Tag")
+                                            .addToBackStack("Tag").commit();
+
+                                     */
                                 }
 
                                 @Override

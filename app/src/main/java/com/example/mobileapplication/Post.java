@@ -1,6 +1,7 @@
 package com.example.mobileapplication;
 
 import java.io.File;
+import java.io.Serializable;
 
 public class Post {
 

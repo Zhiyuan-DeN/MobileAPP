@@ -48,11 +48,17 @@ public class HomeFragment extends Fragment {
     PostAdapter adapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d("Tag", "HomeFragment.onCreateView() has been called.");
         User user = MainActivity.globalUser;
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         posts = new ArrayList<Post>();
         initializeList(root);
+        Bundle bundle = this.getArguments();
+        if(bundle != null) {
+            Log.d("Tag", "Reached here.");
+            adapter.addItem((Post)bundle.getSerializable("value"),0);
+        }
         return root;
     }
 

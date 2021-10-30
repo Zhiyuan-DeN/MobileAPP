@@ -1,7 +1,9 @@
 package com.example.mobileapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,7 +74,7 @@ public class LoginActivity extends AppCompatActivity{
                                 // Turn to main page
                                 Intent i = new Intent(getApplicationContext(),MainActivity.class);
                                 i.putExtra("userName", user.getDocument());
-                                startActivity(i);
+                                startActivityForResult(i,1);
                             }
 
                             @Override
@@ -95,6 +97,8 @@ public class LoginActivity extends AppCompatActivity{
             }
         });
 
+
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +107,25 @@ public class LoginActivity extends AppCompatActivity{
             }
         });
     }
+
+    public Button getButton() {
+        return button;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d("Tag", "Returned result" + resultCode + resultCode);
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                button.performClick();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                // Write your code if there's no result
+            }
+        }
+    } //onActivityResult
 
 
 }

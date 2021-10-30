@@ -30,7 +30,7 @@ public class RecordFragment extends Fragment {
     ImageButton back_to_main;
     ImageButton start_or_pause, pause, play;
     TextView text;
-    User globalUser;
+    User User = MainActivity.globalUser;
     private ShakeManager shake;
     File file;
     Recorder r = new Recorder();
@@ -103,7 +103,7 @@ public class RecordFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (file != null && file.exists()) {
-                    CloudStorageManager.getInstance().uploadFile(globalUser.getUserName(), file,
+                    CloudStorageManager.getInstance().uploadFile(User.getUserName(), file,
                             new CloudStorageManager.UploadCallback<UploadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

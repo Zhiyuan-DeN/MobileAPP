@@ -119,7 +119,40 @@ public class LoginActivity extends AppCompatActivity{
 
         if (requestCode == 1) {
             if(resultCode == Activity.RESULT_OK){
-                button.performClick();
+                CloudStorageManager cloudStorageManager = new CloudStorageManager();
+                cloudStorageManager.downloadFile(new CloudStorageManager.UploadCallback<FileDownloadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                        File[] directoryList = new File(PathUtils.getDownloadPath()).listFiles();
+
+                        postMap = new TreeMap<File, String>(new Comparator<File>() {
+                            @Override
+                            public int compare(File o1, File o2) {
+                                return -o1.getName().compareTo(o2.getName());
+                            }
+                        });
+
+                        for (File directory : directoryList) {
+                            for (File file : directory.listFiles()) {
+                                postMap.put(file, directory.getName());
+                            }
+                        }
+
+                        // Turn to main page
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        i.putExtra("userName", user.getDocument());
+                        startActivityForResult(i, 1);
+                    }
+
+                    @Override
+                    public void onFail(Exception exception) {
+                        String fail = "Load Page Failed";
+                        // Login Successful
+                        Toast.makeText(LoginActivity.this,fail,Toast.LENGTH_SHORT).show();
+                    }
+
+                });
+
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 // Write your code if there's no result

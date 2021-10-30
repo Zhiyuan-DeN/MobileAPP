@@ -140,7 +140,7 @@ public class LoginActivity extends AppCompatActivity{
 
                         // Turn to main page
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                        i.putExtra("userName", user.getDocument());
+                        i.putExtra("userName", MainActivity.globalUser.getDocument());
                         startActivityForResult(i, 1);
                     }
 

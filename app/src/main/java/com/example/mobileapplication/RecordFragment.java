@@ -114,8 +114,9 @@ public class RecordFragment extends Fragment {
                                             Toast.LENGTH_SHORT).show();
 
                                     Intent returnIntent = new Intent();
-                                    getActivity().setResult(Activity.RESULT_OK, returnIntent);
-                                    getActivity().finish();
+                                    MainActivity main = (MainActivity) getParentFragment().getActivity();
+                                    main.setResult(Activity.RESULT_OK, returnIntent);
+                                    main.finish();
 
                                     /*
                                     FragmentManager fm = getActivity().getSupportFragmentManager();

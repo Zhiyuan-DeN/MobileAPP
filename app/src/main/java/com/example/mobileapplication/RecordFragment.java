@@ -109,6 +109,7 @@ public class RecordFragment extends Fragment {
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                     Toast.makeText(getContext(), "Upload Successful",
                                             Toast.LENGTH_SHORT).show();
+                                    LoginActivity.postMap.put(file, User.getUserName());
                                 }
 
                                 @Override

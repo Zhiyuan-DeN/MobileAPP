@@ -19,3 +19,15 @@ Publicity statement: We authorise the University of Melbourne to use material fr
 
 README:
 Please include details on how to compile and run your APP.
+(Also included in readme.md in the project files)
+
+Project Setup
+- Android Studio: 2020.3.1
+- Virtual Device: Pixel 2 API 30
+- Android Gradle Plugin Version: 3.5.2
+- Gradle Version: 5.4.1
+- Gradle JDK: 11
+
+Running the system
+1. Open Android Studio then open the project by Open->File->Open File or Project, and select on MobileAPP,or change SDK location in File->Project Structure->SDK Location
+2. After build and Sync Gradle, select the Virtual device and click "Run"
